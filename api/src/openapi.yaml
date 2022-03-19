@@ -1,0 +1,139 @@
+openapi: 3.0.3
+
+info:
+  title: Lilla Sundis Cup API
+  description: |
+    Backend for frontend API to support the lillasundis webapp.
+  version: ${API_VERSION}
+  license:
+    name: MIT
+    url: https://github.com/sasjo/lillasundiscup
+
+servers:
+  - url: https://lillasundiscup.se/api/v1
+
+paths:
+  /games:
+    get:
+      summary: Get games
+      description: Get the game schedule and results for all games in the cup.
+      operationId: get-schedule-using-get
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                description: The game schedule.
+                items:
+                  $ref: '#/components/schemas/GameSchedule'
+
+  /teams:
+    get:
+      summary: Get teams
+      description: Get participating teams.
+      operationId: get-teams-using-get
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                description: Teams sorted into their category.
+                items:
+                  $ref: '#/components/schemas/TeamCategory'
+
+components:
+  schemas:
+    GameSchedule:
+      type: object
+      description: A game schedule.
+      required:
+        - classifier
+        - games
+      properties:
+        classifier:
+          description: The game category classifier.
+          type: string
+          example: Flickor födda 2008
+        games:
+          description: The games.
+          type: array
+          items:
+            $ref: '#/components/schemas/Game'
+
+    Game:
+      description: A game in the cup.
+      type: object
+      required:
+        - startTime,
+        - endTime,
+        - field
+        - homeTeam,
+        - awayTeam,
+        - status,
+        - score
+      properties:
+        startTime:
+          description: Game start time.
+          type: string
+          pattern: '^\d{2}:\d{2}$'
+          example: 09:00
+        endTime:
+          description: Game end time.
+          type: string
+          pattern: ^\d{2}:\d{2}$
+          example: 09:40
+        field:
+          description: The soccer field.
+          type: string
+        homeTeam:
+          description: The home team.
+          type: string
+        awayTeam:
+          description: The away team.
+          type: string
+        status:
+          description: Game status.
+          type: string
+          enum:
+            - ended
+            - pending
+            - started
+        score:
+          description: Game score.
+          type: string
+          pattern: ^\d+ - \d+$
+          example: 0 - 0
+
+    TeamCategory:
+      description: The teams in a category.
+      type: object
+      required:
+        - classifier
+        - teams
+      properties:
+        classifier:
+          description: The team category classifier
+          type: string
+          example: Flickor födda 2008
+        teams:
+          description: The participating teams.
+          type: array
+          items:
+            $ref: '#/components/schemas/Team'
+
+    Team:
+      description: A participating team.
+      type: object
+      required:
+        - name
+      properties:
+        logo:
+          description: The team logotype.
+          type: string
+        name:
+          description: The team name.
+          type: string

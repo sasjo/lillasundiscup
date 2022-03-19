@@ -1,0 +1,21 @@
+{
+  "name": "lillasundiscup-api",
+  "version": "0.0.1-local",
+  "description": "Backend API for webapp",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "functions-framework --target=cupService"
+  },
+  "author": "sasjo",
+  "license": "MIT",
+  "dependencies": {
+    "@google-cloud/functions-framework": "^3.0.0",
+    "express": "^4.17.3",
+    "googleapis": "^97.0.0"
+  },
+  "devDependencies": {
+    "jest": "^27.5.1",
+    "supertest": "^6.2.2"
+  }
+}
