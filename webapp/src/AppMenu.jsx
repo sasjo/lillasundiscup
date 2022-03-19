@@ -12,9 +12,9 @@ import MenuItem from '@mui/material/MenuItem';
 import { Link as RouterLink } from 'react-router-dom';
 
 const pages = [
-  { name: 'Spelschema', href: '/spelschema' },
-  { name: 'Lag', href: '/lag' },
-  { name: 'Information', href: '/info' },
+  { name: 'Spelschema', href: '/spelschema.html' },
+  { name: 'Lag', href: '/lag.html' },
+  { name: 'Information', href: '/info.html' },
 ];
 
 // TODO Move to common place? Should we use translations to make changes easy?
