@@ -1,0 +1,41 @@
+{
+  "main": {
+    "name": "Acme",
+    "link": "https://www.sunderbysk.se",
+    "img": "images/sponsors/missing-logo.png"
+  },
+  "home": [
+    {
+      "name": "Sponsor 1",
+      "link": "https://www.sunderbysk.se",
+      "img": "images/sponsors/missing-logo.png"
+    },
+    {
+      "name": "Sponsor 2",
+      "link": "https://www.sunderbysk.se",
+      "img": "images/sponsors/missing-logo.png"
+    },
+    {
+      "name": "Sponsor 3",
+      "link": "https://www.sunderbysk.se",
+      "img": "images/sponsors/missing-logo.png"
+    }
+  ],
+  "web": [
+    {
+      "name": "Sponsor 4",
+      "link": "https://www.sunderbysk.se",
+      "img": "images/sponsors/missing-logo.png"
+    },
+    {
+      "name": "Sponsor 5",
+      "link": "https://www.sunderbysk.se",
+      "img": "images/sponsors/missing-logo.png"
+    },
+    {
+      "name": "Sponsor 6",
+      "link": "https://www.sunderbysk.se",
+      "img": "images/sponsors/missing-logo.png"
+    }
+  ]
+}

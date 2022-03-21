@@ -10,6 +10,7 @@ import GameWidget from './GameWidget';
 import CurrentGame from './CurrentGame';
 import NextGame from './NextGame';
 import TeamWidget from './TeamWidget';
+import WebSponsors from './sponsors/WebSponsors';
 
 const Home = () => {
   return (
@@ -37,6 +38,7 @@ const Home = () => {
           <TeamWidget/>
         </Grid>
       </Grid>
+      <WebSponsors/>
     </Container>
   );
 };
