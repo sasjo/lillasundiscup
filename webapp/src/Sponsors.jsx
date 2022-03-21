@@ -96,6 +96,8 @@ SponsorItem.defaultProps = {
   cols: 1,
 };
 
+// Use a carousel? https://www.npmjs.com/package/react-material-ui-carousel
+
 const Sponsors = () => {
   return (
     <Container sx={{mt: 2, mb: 2}} maxWidth="md">

@@ -3,17 +3,16 @@ import Typography from '@mui/material/Typography';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
+import PropTypes from 'prop-types';
+import {gamesPropType} from './api';
 
-// TODO Must be loaded from server.
-const mockData = [
-  { startTime: '10:20', endTime:'11:00', field: '1', home: 'FC Norrsken', away: 'Gammelgårdens IF 1', status: 'pending' },
-  { startTime: '10:20', endTime:'11:00', field: '2', home: 'Luleå SK', away: 'Gammelstads IF', status: 'pending' },
-];
+const NextGame = ({ games }) => {
+  const nextGames = games.flatMap(({games}) => games)
+    .filter((game) => game.status === 'next');
 
-const NextGame = () => {
   return (
     <List disablePadding>
-      {mockData.map((game, index) => (
+      {nextGames.map((game, index) => (
         <ListItem disablePadding key={`game-${index}`}>
           <ListItemText>
             <Typography
@@ -27,7 +26,7 @@ const NextGame = () => {
               noWrap
               component="span"
             >
-              {game.home}
+              {game.homeTeam}
             </Typography>
             <Typography variant="body2" component="span">{' - '}</Typography>
             <Typography
@@ -35,13 +34,17 @@ const NextGame = () => {
               noWrap
               component="span"
             >
-              {game.away}
+              {game.awayTeam}
             </Typography>
           </ListItemText>
         </ListItem>
       ))}
     </List>
   );
+};
+
+NextGame.propTypes = {
+  games: PropTypes.arrayOf(gamesPropType).isRequired,
 };
 
 export default NextGame;

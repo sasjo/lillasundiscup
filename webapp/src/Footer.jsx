@@ -3,7 +3,6 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
-import Grid from '@mui/material/Grid';
 
 const Copyright = () => {
   return (
@@ -32,20 +31,6 @@ const Footer = () => (
     }}
   >
     <Container maxWidth="md">
-      <Grid container spacing={2} columns={{ xs: 4, md: 12}}>
-        <Grid item xs={4} md={4}>
-          Information
-          Hitta hit
-        </Grid>
-        <Grid item xs={4} md={4}>
-          Spelschema
-          Lördag, Söndag
-        </Grid>
-        <Grid item xs={4} md={4}>
-          Sponsorer
-          Kontakt
-        </Grid>
-      </Grid>
       <Copyright />
     </Container>
   </Box>

@@ -15,12 +15,15 @@ import Typography from '@mui/material/Typography';
 import theme from './theme';
 import {useQuery} from 'react-query';
 import {getGames} from './api';
+import Alert from '@mui/material/Alert';
+import LinearProgress from '@mui/material/LinearProgress';
+import lang from './strings';
 
 const GameSchedule = () => {
   const [highlightTeam, setHighlightTeam] = useState('');
   const [hideEndedGames, setHideEndedGames] = useState(true);
 
-  const {isLoading, isError, data, error} = useQuery('games', getGames);
+  const {isLoading, isError, data} = useQuery('games', getGames);
 
   const gameCssStyle = ({homeTeam, awayTeam, status}) => {
     const styles = {};
@@ -58,95 +61,102 @@ const GameSchedule = () => {
     setHideEndedGames(checked);
   };
 
-  if (isLoading) {
-    return <>Loading...</>;
-  }
-
   if (isError) {
-    return <>{error}</>;
+    return (
+      <Container sx={{mt: 2, mb: 2}} maxWidth="md">
+        <Typography variant="h4" component="h1">Spelschema</Typography>
+        <Alert severity="error">
+          {lang('error.games')}
+        </Alert>
+      </Container>
+    );
   }
 
-  console.log(data);
-
-  const hideEndedDefaultValue = data.some(({games}) => games.some((game) => game.status !== 'ended'));
+  const hideEndedDefaultValue = data ? data.some(({games}) => games.some((game) => game.status !== 'ended')) : false;
 
   return (
     <Container sx={{mt: 2, mb: 2}} maxWidth="md">
       <Typography variant="h4" component="h1">Spelschema</Typography>
-      <Typography variant="body1" paragraph>
-        Peka på ett lagnamn för att markera deras matcher.
-      </Typography>
 
-      <FormControlLabel
-        control={<Switch defaultChecked={hideEndedDefaultValue}/>}
-        label="Dölj avslutade matcher"
-        onChange={onSwitchChange}
-      />
+      {isLoading ? (
+        <LinearProgress sx={{ marginTop: '10px' }} />
+      ) :(
+      <>
+        <Typography variant="body1" paragraph>
+          Peka på ett lagnamn för att markera deras matcher.
+        </Typography>
 
-      {data.map(({classifier, games}) => (
-        <React.Fragment key={classifier}>
-          <Typography variant="h6">{classifier}</Typography>
-          <TableContainer component={Paper}>
-            <Table>
-              <TableHead>
-                <TableRow>
-                  <TableCell>Tid</TableCell>
-                  <TableCell>Match</TableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {games.map((game, index) => (
-                  <TableRow key={`game-${index}`} sx={gameCssStyle(game)}>
-                    <TableCell>
-                      <Typography variant="body2" noWrap>{game.startTime}</Typography>
-                      <Typography variant="body2" noWrap>Plan {game.field}</Typography>
-                    </TableCell>
-                    <TableCell>
-                      <Typography
-                        variant="body2"
-                        noWrap
-                        component="span"
-                        sx={teamCssStyle(game.homeTeam)}
-                        onClick={onHighlightTeam}
-                        data-team={game.homeTeam}
-                      >
-                        {game.homeTeam}
-                      </Typography>
-                      <Typography variant="body2" component="span">{' - '}</Typography>
-                      <Typography
-                        variant="body2"
-                        noWrap
-                        component="span"
-                        sx={teamCssStyle(game.awayTeam)}
-                        onClick={onHighlightTeam}
-                        data-team={game.awayTeam}
-                      >
-                        {game.awayTeam}
-                      </Typography>
-                      {game.score && (
-                        <Grid container direction="row" alignItems="center">
-                          {game.status === 'started' && (
-                            <Grid item>
-                              <SportsSoccerIcon fontSize="small" color="secondary"/>
-                            </Grid>
-                          )}
-                          <Grid item>
-                            <Typography variant="caption" component="div">
-                              {game.status === 'ended' ? 'Slutresultat' : 'Ställning'}
-                              {' '}
-                              {game.score}
-                            </Typography>
-                          </Grid>
-                        </Grid>
-                      )}
-                    </TableCell>
+        <FormControlLabel
+          control={<Switch defaultChecked={hideEndedDefaultValue}/>}
+          label="Dölj avslutade matcher"
+          onChange={onSwitchChange}
+        />
+
+        {data.map(({classifier, games}) => (
+          <React.Fragment key={classifier}>
+            <Typography variant="h6">{classifier}</Typography>
+            <TableContainer component={Paper}>
+              <Table>
+                <TableHead>
+                  <TableRow>
+                    <TableCell>Tid</TableCell>
+                    <TableCell>Match</TableCell>
                   </TableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </TableContainer>
-        </React.Fragment>
-      ))}
+                </TableHead>
+                <TableBody>
+                  {games.map((game, index) => (
+                    <TableRow key={`game-${index}`} sx={gameCssStyle(game)}>
+                      <TableCell>
+                        <Typography variant="body2" noWrap>{game.startTime}</Typography>
+                        <Typography variant="body2" noWrap>Plan {game.field}</Typography>
+                      </TableCell>
+                      <TableCell>
+                        <Typography
+                          variant="body2"
+                          noWrap
+                          component="span"
+                          sx={teamCssStyle(game.homeTeam)}
+                          onClick={onHighlightTeam}
+                          data-team={game.homeTeam}
+                        >
+                          {game.homeTeam}
+                        </Typography>
+                        <Typography variant="body2" component="span">{' - '}</Typography>
+                        <Typography
+                          variant="body2"
+                          noWrap
+                          component="span"
+                          sx={teamCssStyle(game.awayTeam)}
+                          onClick={onHighlightTeam}
+                          data-team={game.awayTeam}
+                        >
+                          {game.awayTeam}
+                        </Typography>
+                        {game.score && (
+                          <Grid container direction="row" alignItems="center">
+                            {game.status === 'started' && (
+                              <Grid item>
+                                <SportsSoccerIcon fontSize="small" color="secondary"/>
+                              </Grid>
+                            )}
+                            <Grid item>
+                              <Typography variant="caption" component="div">
+                                {game.status === 'ended' ? 'Slutresultat' : 'Ställning'}
+                                {' '}
+                                {game.score}
+                              </Typography>
+                            </Grid>
+                          </Grid>
+                        )}
+                      </TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </TableContainer>
+          </React.Fragment>
+        ))}
+      </>)}
     </Container>
   );
 };
