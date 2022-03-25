@@ -1,6 +1,6 @@
 const getSheetValues = require('./sheets-api');
 
-const mapGame = (row) => {
+const mapGame = (row, index, games) => {
   const [
     startTime,
     endTime,
@@ -13,11 +13,19 @@ const mapGame = (row) => {
     awayGoals,
   ] = row;
 
+  const startedIndex = 5;
+
   let status = 'pending';
   if (started === 'TRUE' && ended === 'TRUE') {
     status = 'ended';
   } else if (started === 'TRUE') {
     status = 'started';
+  } else if (index <= 1) {
+    // First two games are up next if not started or ended.
+    status = 'next';
+  } else if (games[index - 2][startedIndex] === 'TRUE') {
+    // The previous game on this field is started. This means this game up next.
+    status = 'next';
   }
 
   return {
@@ -31,16 +39,27 @@ const mapGame = (row) => {
   };
 };
 
-const getGames = async () => getSheetValues(['Flickor!A4:I', 'Pojkar!A4:I',])
-  .then(([girls, boys]) => {
+const getGames = async () => getSheetValues(['Flickor!A1:A1', 'Flickor!A4:I', 'Pojkar!A1:A1', 'Pojkar!A4:I'])
+  .then(([girlsDate, girls, boysDate, boys]) => {
+    const girlGames = girls.map(mapGame);
+    const boyGames = boys.map(mapGame);
+
+    // If next game exists for girls, it can't also exist for boys as they play the day after.
+    if (girlGames.some(({ status }) => status === 'next')) {
+      boyGames.forEach((game) => {
+        if (game.status === 'next') {
+          game.status = 'pending';
+        }
+      });
+    }
     return [
       {
-        classifier: 'Flickor födda 2008',
-        games: girls.map(mapGame),
+        date: girlsDate[0][0],
+        games: girlGames,
       },
       {
-        classifier: 'Pojkar födda 2008',
-        games: boys.map(mapGame),
+        date: boysDate[0][0],
+        games: boyGames,
       }
     ];
   });

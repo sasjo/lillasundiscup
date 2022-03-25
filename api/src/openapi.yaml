@@ -51,13 +51,13 @@ components:
       type: object
       description: A game schedule.
       required:
-        - classifier
+        - date
         - games
       properties:
-        classifier:
-          description: The game category classifier.
+        date:
+          description: The game date
           type: string
-          example: Flickor födda 2008
+          example: Lördag 15 maj
         games:
           description: The games.
           type: array
@@ -100,6 +100,7 @@ components:
           type: string
           enum:
             - ended
+            - next
             - pending
             - started
         score:

@@ -17,7 +17,7 @@ const Teams = () => {
   if (isError) {
     return (
       <Container sx={{mt: 2, mb: 2}} maxWidth="md">
-        <Typography variant="h4" component="h1">Lag</Typography>
+        <Typography variant="h4" component="h1" gutterBottom>Lag</Typography>
         <Alert severity="error">
           {lang('error.teams')}
         </Alert>
@@ -27,7 +27,7 @@ const Teams = () => {
 
   return (
     <Container sx={{mt: 2, mb: 2}} maxWidth="md">
-      <Typography variant="h4" component="h1">Lag</Typography>
+      <Typography variant="h4" component="h1" gutterBottom>Lag</Typography>
       { isLoading ? (
         <LinearProgress sx={{ marginTop: '10px' }} />
       ) : (

@@ -63,7 +63,7 @@ const GameSchedule = () => {
   if (isError) {
     return (
       <Container sx={{mt: 2, mb: 2}} maxWidth="md">
-        <Typography variant="h4" component="h1">Spelschema</Typography>
+        <Typography variant="h4" component="h1" gutterBottom>Spelschema</Typography>
         <Alert severity="error">
           {lang('error.games')}
         </Alert>
@@ -73,9 +73,11 @@ const GameSchedule = () => {
 
   const showEndedDefaultValue = data ? !data.some(({games}) => games.some((game) => game.status !== 'ended')) : true;
 
+  const dateFormat =(date) => date.charAt(0).toUpperCase() + date.slice(1);
+
   return (
     <Container sx={{mt: 2, mb: 2}} maxWidth="md">
-      <Typography variant="h4" component="h1">Spelschema</Typography>
+      <Typography variant="h4" component="h1" gutterBottom>Spelschema</Typography>
 
       {isLoading ? (
         <LinearProgress sx={{ marginTop: '10px' }} />
@@ -86,8 +88,8 @@ const GameSchedule = () => {
         </Typography>
 
         <Typography variant="body1" component="ul" gutterBottom>
-            {data.map(({classifier}, index) => (
-              <li key={`day-${index}`}><a href={`#day-${index + 1}`}>{classifier}</a></li>
+            {data.map(({date}, index) => (
+              <li key={`day-${index}`}><a href={`#day-${index + 1}`}>{dateFormat(date)}</a></li>
             ))}
         </Typography>
 
@@ -97,9 +99,9 @@ const GameSchedule = () => {
           onChange={onSwitchChange}
         />
 
-        {data.map(({classifier, games}, index) => (
-          <React.Fragment key={classifier}>
-            <Typography id={`day-${index + 1}`} variant="h6" sx={{ mt: '20px' }}>{classifier}</Typography>
+        {data.map(({date, games}, index) => (
+          <React.Fragment key={date}>
+            <Typography id={`day-${index + 1}`} variant="h6" sx={{ mt: '20px' }}>{dateFormat(date)}</Typography>
             <TableContainer>
               <Table>
                 <TableHead>

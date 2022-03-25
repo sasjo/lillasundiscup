@@ -42,7 +42,13 @@ describe('/api/v1', () => {
   test('It can get games', async () => {
     getSheetValues.mockResolvedValueOnce([
       [
+        ['2022-05-14'],
+      ],
+      [
         ['09:00', '09:40', 'Field 1', 'Team C', 'Team D', 'FALSE', 'FALSE', '', ''],
+      ],
+      [
+        ['2022-05-15'],
       ],
       [],
     ]);
@@ -52,7 +58,7 @@ describe('/api/v1', () => {
       .expect('Content-Type', /json/);
     expect(response.body).toMatchObject([
       {
-        classifier: 'Flickor födda 2008',
+        date: '2022-05-14',
         games: [
           expect.objectContaining({
             homeTeam: 'Team C',
@@ -61,7 +67,7 @@ describe('/api/v1', () => {
         ],
       },
       {
-        classifier: 'Pojkar födda 2008',
+        date: '2022-05-15',
         games: [],
       },
     ]);

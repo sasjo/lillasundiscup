@@ -2,7 +2,7 @@ const axios = require('axios');
 const PropTypes = require('prop-types');
 
 const gamesPropType = PropTypes.shape({
-  classifier: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
   games: PropTypes.arrayOf(PropTypes.shape({
     startTime: PropTypes.string.isRequired,
     endTime: PropTypes.string.isRequired,
