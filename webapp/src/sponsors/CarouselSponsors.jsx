@@ -2,6 +2,7 @@ import * as React from 'react';
 import Container from '@mui/material/Container';
 import Carousel from 'react-material-ui-carousel';
 import sponsors from './sponsor-data.json';
+import Paper from '@mui/material/Paper';
 
 const CarouselSponsors = () => {
 
@@ -10,12 +11,12 @@ const CarouselSponsors = () => {
 
   return (
     <Container sx={{mt: 2, mb: 2}} maxWidth="md">
+      <Paper variant="outlined">
       <Carousel
         animation="fade"
         stopAutoPlayOnHover={false}
         indicators={false}
         navButtonsAlwaysInvisible
-        sx={{ mb: '10px', border: '1px solid black' }}
       >
         {content.map(({ img, name, link }, index) => (
           <div key={`sponsor${index}`} style={{ height: '150px' }}>
@@ -30,6 +31,7 @@ const CarouselSponsors = () => {
           </div>
         ))}
       </Carousel>
+      </Paper>
     </Container>
   );
 }

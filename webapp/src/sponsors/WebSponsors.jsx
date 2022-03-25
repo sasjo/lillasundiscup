@@ -45,7 +45,7 @@ const WebSponsors = () => {
   const all = [main, ...home, ...web];
 
   return (
-    <>
+    <Container sx={{mt: 2, mb: 2}} maxWidth="md">
       <Divider>
         <Chip label="Sponsorer"/>
       </Divider>
@@ -54,7 +54,7 @@ const WebSponsors = () => {
           <SponsorItem key={`sponsor${index}`} item={item}/>
         ))}
       </ImageList>
-    </>
+    </Container>
   );
 }
 

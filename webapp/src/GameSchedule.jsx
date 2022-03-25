@@ -9,7 +9,6 @@ import TableCell from '@mui/material/TableCell';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
 import SportsSoccerIcon from '@mui/icons-material/SportsSoccer';
-import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import theme from './theme';
@@ -58,7 +57,7 @@ const GameSchedule = () => {
   };
 
   const onSwitchChange = ({currentTarget: {checked}}) => {
-    setHideEndedGames(checked);
+    setHideEndedGames(!checked);
   };
 
   if (isError) {
@@ -72,7 +71,7 @@ const GameSchedule = () => {
     );
   }
 
-  const hideEndedDefaultValue = data ? data.some(({games}) => games.some((game) => game.status !== 'ended')) : false;
+  const showEndedDefaultValue = data ? !data.some(({games}) => games.some((game) => game.status !== 'ended')) : true;
 
   return (
     <Container sx={{mt: 2, mb: 2}} maxWidth="md">
@@ -86,16 +85,22 @@ const GameSchedule = () => {
           Peka på ett lagnamn för att markera deras matcher.
         </Typography>
 
+        <Typography variant="body1" component="ul" gutterBottom>
+            {data.map(({classifier}, index) => (
+              <li key={`day-${index}`}><a href={`#day-${index + 1}`}>{classifier}</a></li>
+            ))}
+        </Typography>
+
         <FormControlLabel
-          control={<Switch defaultChecked={hideEndedDefaultValue}/>}
-          label="Dölj avslutade matcher"
+          control={<Switch defaultChecked={showEndedDefaultValue}/>}
+          label="Visa avslutade matcher"
           onChange={onSwitchChange}
         />
 
-        {data.map(({classifier, games}) => (
+        {data.map(({classifier, games}, index) => (
           <React.Fragment key={classifier}>
-            <Typography variant="h6">{classifier}</Typography>
-            <TableContainer component={Paper}>
+            <Typography id={`day-${index + 1}`} variant="h6" sx={{ mt: '20px' }}>{classifier}</Typography>
+            <TableContainer>
               <Table>
                 <TableHead>
                   <TableRow>

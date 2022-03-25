@@ -73,6 +73,17 @@ const AppMenu = () => {
                 display: {xs: 'block', md: 'none'},
               }}
             >
+              <MenuItem onClick={handleCloseNavMenu}>
+                <Typography
+                  textAlign="center"
+                  color="inherit"
+                  component={RouterLink}
+                  to="/"
+                  sx={{ textDecoration: 'none' }}
+                >
+                  Hem
+                </Typography>
+              </MenuItem>
               {pages.map(({name, href}) => (
                 <MenuItem key={href} onClick={handleCloseNavMenu}>
                   <Typography
