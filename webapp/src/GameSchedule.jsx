@@ -24,7 +24,7 @@ const GameSchedule = () => {
 
   const {isLoading, isError, data} = useQuery('games', getGames);
 
-  const gameCssStyle = ({homeTeam, awayTeam, status}) => {
+  const gameCssStyle = ({homeTeam, awayTeam, status}, dayIndex) => {
     const styles = {};
     if (status === 'ended') {
       styles['> td'] = {color: theme.palette.action.disabled};
@@ -35,7 +35,7 @@ const GameSchedule = () => {
     if (status === 'started') {
       styles['> td'] = {color: theme.palette.secondary.dark};
     }
-    if ([homeTeam, awayTeam].includes(highlightTeam)) {
+    if ([`${dayIndex}-${homeTeam}`, `${dayIndex}-${awayTeam}`].includes(highlightTeam)) {
       styles.backgroundColor = theme.palette.grey['200'];
     }
     return styles;
@@ -111,8 +111,8 @@ const GameSchedule = () => {
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                  {games.map((game, index) => (
-                    <TableRow key={`game-${index}`} sx={gameCssStyle(game)}>
+                  {games.map((game, gameIndex) => (
+                    <TableRow key={`game-${gameIndex}`} sx={gameCssStyle(game, index)}>
                       <TableCell>
                         <Typography variant="body2" noWrap>{game.startTime}</Typography>
                         <Typography variant="body2" noWrap>Plan {game.field}</Typography>
@@ -122,9 +122,9 @@ const GameSchedule = () => {
                           variant="body2"
                           noWrap
                           component="span"
-                          sx={teamCssStyle(game.homeTeam)}
+                          sx={teamCssStyle(`${index}-${game.homeTeam}`)}
                           onClick={onHighlightTeam}
-                          data-team={game.homeTeam}
+                          data-team={`${index}-${game.homeTeam}`}
                         >
                           {game.homeTeam}
                         </Typography>
@@ -133,9 +133,9 @@ const GameSchedule = () => {
                           variant="body2"
                           noWrap
                           component="span"
-                          sx={teamCssStyle(game.awayTeam)}
+                          sx={teamCssStyle(`${index}-${game.awayTeam}`)}
                           onClick={onHighlightTeam}
-                          data-team={game.awayTeam}
+                          data-team={`${index}-${game.awayTeam}`}
                         >
                           {game.awayTeam}
                         </Typography>
