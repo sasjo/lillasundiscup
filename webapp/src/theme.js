@@ -6,10 +6,10 @@ import { svSE } from '@mui/material/locale';
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#556cd6',
+      main: 'rgb(43,43,43)',
     },
     secondary: {
-      main: '#19857b',
+      main: 'rgb(106, 135, 89)'// '#19857b',
     },
     error: {
       main: red.A400,

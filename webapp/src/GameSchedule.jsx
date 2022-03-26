@@ -63,7 +63,7 @@ const GameSchedule = () => {
   if (isError) {
     return (
       <Container sx={{mt: 2, mb: 2}} maxWidth="md">
-        <Typography variant="h4" component="h1" gutterBottom>Spelschema</Typography>
+        <Typography variant="h4" component="h1" gutterBottom>Matcher</Typography>
         <Alert severity="error">
           {lang('error.games')}
         </Alert>
@@ -77,7 +77,7 @@ const GameSchedule = () => {
 
   return (
     <Container sx={{mt: 2, mb: 2}} maxWidth="md">
-      <Typography variant="h4" component="h1" gutterBottom>Spelschema</Typography>
+      <Typography variant="h4" component="h1" gutterBottom>Matcher</Typography>
 
       {isLoading ? (
         <LinearProgress sx={{ marginTop: '10px' }} />

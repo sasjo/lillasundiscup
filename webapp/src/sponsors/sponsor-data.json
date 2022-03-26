@@ -13,12 +13,12 @@
     {
       "name": "Sponsor 2",
       "link": "https://www.sunderbysk.se",
-      "img": "images/sponsors/missing-logo.png"
+      "img": "images/sponsors/missing-logo2.png"
     },
     {
       "name": "Sponsor 3",
       "link": "https://www.sunderbysk.se",
-      "img": "images/sponsors/missing-logo.png"
+      "img": "images/sponsors/missing-logo3.png"
     }
   ],
   "web": [
@@ -30,12 +30,12 @@
     {
       "name": "Sponsor 5",
       "link": "https://www.sunderbysk.se",
-      "img": "images/sponsors/missing-logo.png"
+      "img": "images/sponsors/missing-logo2.png"
     },
     {
       "name": "Sponsor 6",
       "link": "https://www.sunderbysk.se",
-      "img": "images/sponsors/missing-logo.png"
+      "img": "images/sponsors/missing-logo3.png"
     }
   ]
 }

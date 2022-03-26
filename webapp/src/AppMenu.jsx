@@ -12,7 +12,7 @@ import MenuItem from '@mui/material/MenuItem';
 import { Link as RouterLink } from 'react-router-dom';
 
 const pages = [
-  { name: 'Spelschema', href: '/spelschema.html' },
+  { name: 'Matcher', href: '/matcher.html' },
   { name: 'Lag', href: '/lag.html' },
   { name: 'Information', href: '/info.html' },
 ];

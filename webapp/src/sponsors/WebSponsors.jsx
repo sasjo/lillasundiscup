@@ -49,7 +49,7 @@ const WebSponsors = () => {
       <Divider>
         <Chip label="Sponsorer"/>
       </Divider>
-      <ImageList variant="standard" cols={4}>
+      <ImageList variant="standard" cols={3}>
         {all.map((item, index) => (
           <SponsorItem key={`sponsor${index}`} item={item}/>
         ))}
