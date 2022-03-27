@@ -1,0 +1,62 @@
+name: commit
+on: push
+
+env:
+  IMAGE: europe-north1-docker.pkg.dev/lillasundiscup/lillasundiscup/webapp
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16
+          cache: npm
+          cache-dependency-path: '*/package-lock.json'
+
+      - name: npm install
+        run: |
+          npm ci --prefix api
+          npm ci --prefix webapp
+
+      - name: Unit test API
+        run: npm test -- --coverage
+        working-directory: api
+
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build image
+        run: docker build -t $IMAGE:${{ github.sha }} .
+
+      - uses: extenda/actions/setup-gcloud@v0
+        with:
+          service-account-key: ${{ secrets.GCLOUD_AUTH }}
+
+      - name: Push image
+        if: github.ref == 'refs/heads/master'
+        run: |
+          gcloud --quiet auth configure-docker europe-north1-docker.pkg.dev
+          docker push $IMAGE:${{ github.sha }}
+
+  deploy:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
+    needs:
+      - test
+      - docker
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - uses: extenda/actions/setup-gcloud@v0
+        with:
+          service-account-key: ${{ secrets.GCLOUD_AUTH }}
+
+      - run: |
+          echo "TODO Use glcoud to deploy to managed cloud run"
