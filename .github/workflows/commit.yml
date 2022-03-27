@@ -16,6 +16,12 @@ jobs:
           cache: npm
           cache-dependency-path: '*/package-lock.json'
 
+      - uses: extenda/actions/gcp-secret-manager@v0
+        with:
+          service-account-key: ${{ secrets.GCLOUD_AUTH }}
+          secrets: |
+            SHEETS_API_KEY: sheets-api-key
+
       - name: npm install
         run: |
           npm ci --prefix api
@@ -34,6 +40,7 @@ jobs:
         run: docker build -t $IMAGE:${{ github.sha }} .
 
       - uses: extenda/actions/setup-gcloud@v0
+        if: github.ref == 'refs/heads/master'
         with:
           service-account-key: ${{ secrets.GCLOUD_AUTH }}
 
