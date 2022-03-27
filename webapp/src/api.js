@@ -1,7 +1,7 @@
-const axios = require('axios');
-const PropTypes = require('prop-types');
+import axios from 'axios';
+import PropTypes from 'prop-types';
 
-const gamesPropType = PropTypes.shape({
+export const gamesPropType = PropTypes.shape({
   date: PropTypes.string.isRequired,
   games: PropTypes.arrayOf(PropTypes.shape({
     startTime: PropTypes.string.isRequired,
@@ -14,14 +14,8 @@ const gamesPropType = PropTypes.shape({
   })).isRequired,
 });
 
-const getGames = async () => axios.get('/api/v1/games')
+export const getGames = async () => axios.get('/api/v1/games')
   .then((response) => response.data);
 
-const getTeams = async () => axios.get('/api/v1/teams')
+export const getTeams = async () => axios.get('/api/v1/teams')
   .then((response) => response.data);
-
-module.exports = {
-  gamesPropType,
-  getGames,
-  getTeams,
-};
