@@ -10,8 +10,8 @@ import theme from './theme';
 import Home from './Home';
 import GameSchedule from './GameSchedule';
 import Teams from './Teams';
-import WebSponsors from './sponsors/WebSponsors';
 import CarouselSponsors from './sponsors/CarouselSponsors';
+import Info from './Info';
 
 const queryClient = new QueryClient();
 
@@ -35,6 +35,7 @@ const App = () => {
                 <Route path="/" element={<Home/>}/>
                 <Route path="/matcher.html" element={<GameSchedule/>}/>
                 <Route path="/lag.html" element={<Teams/>}/>
+                <Route path="/info.html" element={<Info/>}/>
               </Routes>
             </main>
             <Footer/>
