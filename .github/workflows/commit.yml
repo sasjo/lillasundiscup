@@ -16,6 +16,12 @@ jobs:
           cache: npm
           cache-dependency-path: '*/package-lock.json'
 
+      - uses: extenda/actions/gcp-secret-manager@v0
+        with:
+          service-account-key: ${{ secrets.GCLOUD_AUTH }}
+          secrets: |
+            SHEETS_API_KEY: sheets-api-key
+
       - name: npm install
         run: |
           npm ci --prefix api
@@ -34,6 +40,7 @@ jobs:
         run: docker build -t $IMAGE:${{ github.sha }} .
 
       - uses: extenda/actions/setup-gcloud@v0
+        if: github.ref == 'refs/heads/master'
         with:
           service-account-key: ${{ secrets.GCLOUD_AUTH }}
 
@@ -45,6 +52,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
+    concurrency: production_environment
     if: github.ref == 'refs/heads/master'
     needs:
       - test
@@ -58,5 +66,28 @@ jobs:
         with:
           service-account-key: ${{ secrets.GCLOUD_AUTH }}
 
-      - run: |
-          echo "TODO Use glcoud to deploy to managed cloud run"
+      - name: Create release
+        uses: extenda/actions/conventional-release@v0
+        id: release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Tag Docker image
+        run: |
+          gcloud container images add-tag \
+            $IMAGE:${{ github.sha }} \
+            $IMAGE:${{ steps.release.outputs.release-tag }}
+
+      - name: Deploy to Cloud Run
+        run: |
+          gcloud run deploy lillasundiscup \
+            --image=$IMAGE:${{ steps.release.outputs.release-tag }}
+            --region=europe-north1 \
+            --cpu=1 \
+            --memory=256m \
+            --concurrency=default \
+            --max-instances=10 \
+            --service-account=lillasundiscup-cloudrun@lillasundiscup.iam.gserviceaccount.com \
+            --set-secrets=SHEETS_API_KEY=sheets-api-key:latest \
+            --ingress=all \
+            --allow-unauthenticated
