@@ -84,7 +84,7 @@ jobs:
             --image=$IMAGE:${{ steps.release.outputs.release-tag }} \
             --region=europe-north1 \
             --cpu=1 \
-            --memory=256m \
+            --memory=256Mi \
             --concurrency=default \
             --max-instances=10 \
             --service-account=lillasundiscup-cloudrun@lillasundiscup.iam.gserviceaccount.com \
