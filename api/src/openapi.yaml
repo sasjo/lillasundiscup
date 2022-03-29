@@ -68,13 +68,12 @@ components:
       description: A game in the cup.
       type: object
       required:
-        - startTime,
-        - endTime,
+        - startTime
+        - endTime
         - field
-        - homeTeam,
-        - awayTeam,
-        - status,
-        - score
+        - homeTeam
+        - awayTeam
+        - status
       properties:
         startTime:
           description: Game start time.
@@ -103,11 +102,6 @@ components:
             - next
             - pending
             - started
-        score:
-          description: Game score.
-          type: string
-          pattern: ^\d+ - \d+$
-          example: 0 - 0
 
     TeamCategory:
       description: The teams in a category.

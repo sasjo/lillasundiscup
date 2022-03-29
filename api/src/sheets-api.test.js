@@ -1,6 +1,8 @@
 const getSheetValues = require('./sheets-api');
 
-test('It can fetch sheet ranges', async () => {
+const integrationTest = (...args) => process.env.SHEETS_API_KEY ? test(...args) : test.skip(...args);
+
+integrationTest('It can fetch sheet ranges', async () => {
   const values = await getSheetValues(['Flickor!M3:M']);
   expect(values).not.toHaveLength(0);
 });

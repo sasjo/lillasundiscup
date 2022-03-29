@@ -9,8 +9,6 @@ const mapGame = (row, index, games) => {
     awayTeam,
     started,
     ended,
-    homeGoals,
-    awayGoals,
   ] = row;
 
   const startedIndex = 5;
@@ -35,11 +33,10 @@ const mapGame = (row, index, games) => {
     homeTeam,
     awayTeam,
     status,
-    score: `${Number(homeGoals) || 0} - ${Number(awayGoals) || 0}`,
   };
 };
 
-const getGames = async () => getSheetValues(['Flickor!A1:A1', 'Flickor!A4:I', 'Pojkar!A1:A1', 'Pojkar!A4:I'])
+const getGames = async () => getSheetValues(['Flickor!A1:A1', 'Flickor!A4:H', 'Pojkar!A1:A1', 'Pojkar!A4:H'])
   .then(([girlsDate, girls, boysDate, boys]) => {
     const girlGames = girls.map(mapGame);
     const boyGames = boys.map(mapGame);
