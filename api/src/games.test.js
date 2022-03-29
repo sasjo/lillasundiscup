@@ -9,18 +9,18 @@ test('It successfully loads games', async () => {
       ['lördag 14 maj']
     ],
     [
-      ['09:00', '09:40', 'Field 1', 'Team C', 'Team D', 'TRUE', 'TRUE', '', ''],
+      ['09:00', '09:40', 'Field 1', 'Team C', 'Team D', 'TRUE', 'TRUE'],
     ],
     [
       ['söndag 15 maj']
     ],
     [
-      ['09:00', '09:40', 'Field 1', 'Team A', 'Team B', 'TRUE', 'TRUE', '1', '3'],
-      ['09:00', '09:40', 'Field 2', 'Team AA', 'Team BB', 'TRUE', 'TRUE', '0', '0'],
-      ['09:40', '10:20', 'Field 1', 'Team C', 'Team D', 'TRUE', 'FALSE', '1', '3'],
-      ['09:40', '10:20', 'Field 2', 'Team E', 'Team F', 'TRUE', 'FALSE', '0', '0'],
-      ['10:20', '11:00', 'Field 1', 'Team G', 'Team H', 'FALSE', 'FALSE', '0', '0'],
-      ['10:20', '11:00', 'Field 2', 'Team I', 'Team J', 'FALSE', 'FALSE', '0', '0'],
+      ['09:00', '09:40', 'Field 1', 'Team A', 'Team B', 'TRUE', 'TRUE'],
+      ['09:00', '09:40', 'Field 2', 'Team AA', 'Team BB', 'TRUE', 'TRUE'],
+      ['09:40', '10:20', 'Field 1', 'Team C', 'Team D', 'TRUE', 'FALSE'],
+      ['09:40', '10:20', 'Field 2', 'Team E', 'Team F', 'TRUE', 'FALSE'],
+      ['10:20', '11:00', 'Field 1', 'Team G', 'Team H', 'FALSE', 'FALSE'],
+      ['10:20', '11:00', 'Field 2', 'Team I', 'Team J', 'FALSE', 'FALSE']
     ],
   ]);
   const games = await getGames();
@@ -36,7 +36,6 @@ test('It successfully loads games', async () => {
           homeTeam: 'Team C',
           awayTeam: 'Team D',
           status: 'ended',
-          score: '0 - 0',
         }
       ],
     },
@@ -50,7 +49,6 @@ test('It successfully loads games', async () => {
           homeTeam: 'Team A',
           awayTeam: 'Team B',
           status: 'ended',
-          score: '1 - 3',
         },
         {
           startTime: '09:00',
@@ -59,7 +57,6 @@ test('It successfully loads games', async () => {
           homeTeam: 'Team AA',
           awayTeam: 'Team BB',
           status: 'ended',
-          score: '0 - 0',
         },
         {
           startTime: '09:40',
@@ -68,7 +65,6 @@ test('It successfully loads games', async () => {
           homeTeam: 'Team C',
           awayTeam: 'Team D',
           status: 'started',
-          score: '1 - 3',
         },
         {
           startTime: '09:40',
@@ -77,7 +73,6 @@ test('It successfully loads games', async () => {
           homeTeam: 'Team E',
           awayTeam: 'Team F',
           status: 'started',
-          score: '0 - 0',
         },
         {
           startTime: '10:20',
@@ -86,7 +81,6 @@ test('It successfully loads games', async () => {
           homeTeam: 'Team G',
           awayTeam: 'Team H',
           status: 'next',
-          score: '0 - 0',
         },
         {
           startTime: '10:20',
@@ -95,7 +89,6 @@ test('It successfully loads games', async () => {
           homeTeam: 'Team I',
           awayTeam: 'Team J',
           status: 'next',
-          score: '0 - 0',
         }
       ],
     },

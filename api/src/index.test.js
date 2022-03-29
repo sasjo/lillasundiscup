@@ -45,7 +45,7 @@ describe('/api/v1', () => {
         ['2022-05-14'],
       ],
       [
-        ['09:00', '09:40', 'Field 1', 'Team C', 'Team D', 'FALSE', 'FALSE', '', ''],
+        ['09:00', '09:40', 'Field 1', 'Team C', 'Team D', 'FALSE', 'FALSE'],
       ],
       [
         ['2022-05-15'],
