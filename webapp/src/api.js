@@ -10,7 +10,6 @@ export const gamesPropType = PropTypes.shape({
     homeTeam: PropTypes.string.isRequired,
     awayTeam: PropTypes.string.isRequired,
     status: PropTypes.string.isRequired,
-    score: PropTypes.string,
   })).isRequired,
 });
 

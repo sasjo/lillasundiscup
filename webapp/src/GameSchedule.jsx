@@ -73,97 +73,91 @@ const GameSchedule = () => {
 
   const showEndedDefaultValue = data ? !data.some(({games}) => games.some((game) => game.status !== 'ended')) : true;
 
-  const dateFormat =(date) => date.charAt(0).toUpperCase() + date.slice(1);
+  const dateFormat = (date) => date.charAt(0).toUpperCase() + date.slice(1);
 
   return (
     <Container sx={{mt: 2, mb: 2}} maxWidth="md">
       <Typography variant="h4" component="h1" gutterBottom>Matcher</Typography>
 
       {isLoading ? (
-        <LinearProgress sx={{ marginTop: '10px' }} />
-      ) :(
-      <>
-        <Typography variant="body1" paragraph>
-          Peka på ett lagnamn för att markera deras matcher.
-        </Typography>
+        <LinearProgress sx={{marginTop: '10px'}}/>
+      ) : (
+        <>
+          <Typography variant="body1" paragraph>
+            Peka på ett lagnamn för att markera deras matcher.
+          </Typography>
 
-        <Typography variant="body1" component="ul" gutterBottom>
+          <Typography variant="body1" component="ul" gutterBottom>
             {data.map(({date}, index) => (
               <li key={`day-${index}`}><a href={`#day-${index + 1}`}>{dateFormat(date)}</a></li>
             ))}
-        </Typography>
+          </Typography>
 
-        <FormControlLabel
-          control={<Switch defaultChecked={showEndedDefaultValue}/>}
-          label="Visa avslutade matcher"
-          onChange={onSwitchChange}
-        />
+          <FormControlLabel
+            control={<Switch defaultChecked={showEndedDefaultValue}/>}
+            label="Visa avslutade matcher"
+            onChange={onSwitchChange}
+          />
 
-        {data.map(({date, games}, index) => (
-          <React.Fragment key={date}>
-            <Typography id={`day-${index + 1}`} variant="h6" sx={{ mt: '20px' }}>{dateFormat(date)}</Typography>
-            <TableContainer>
-              <Table>
-                <TableHead>
-                  <TableRow>
-                    <TableCell>Tid</TableCell>
-                    <TableCell>Match</TableCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                  {games.map((game, gameIndex) => (
-                    <TableRow key={`game-${gameIndex}`} sx={gameCssStyle(game, index)}>
-                      <TableCell>
-                        <Typography variant="body2" noWrap>{game.startTime}</Typography>
-                        <Typography variant="body2" noWrap>Plan {game.field}</Typography>
-                      </TableCell>
-                      <TableCell>
-                        <Typography
-                          variant="body2"
-                          noWrap
-                          component="span"
-                          sx={teamCssStyle(`${index}-${game.homeTeam}`)}
-                          onClick={onHighlightTeam}
-                          data-team={`${index}-${game.homeTeam}`}
-                        >
-                          {game.homeTeam}
-                        </Typography>
-                        <Typography variant="body2" component="span">{' - '}</Typography>
-                        <Typography
-                          variant="body2"
-                          noWrap
-                          component="span"
-                          sx={teamCssStyle(`${index}-${game.awayTeam}`)}
-                          onClick={onHighlightTeam}
-                          data-team={`${index}-${game.awayTeam}`}
-                        >
-                          {game.awayTeam}
-                        </Typography>
-                        {game.score && (
+          {data.map(({date, games}, index) => (
+            <React.Fragment key={date}>
+              <Typography id={`day-${index + 1}`} variant="h6"
+                          sx={{mt: '20px'}}>{dateFormat(date)}</Typography>
+              <TableContainer>
+                <Table>
+                  <TableHead>
+                    <TableRow>
+                      <TableCell>Tid</TableCell>
+                      <TableCell>Match</TableCell>
+                    </TableRow>
+                  </TableHead>
+                  <TableBody>
+                    {games.map((game, gameIndex) => (
+                      <TableRow key={`game-${gameIndex}`} sx={gameCssStyle(game, index)}>
+                        <TableCell>
+                          <Typography variant="body2" noWrap>{game.startTime}</Typography>
+                          <Typography variant="body2" noWrap>Plan {game.field}</Typography>
+                        </TableCell>
+                        <TableCell>
                           <Grid container direction="row" alignItems="center">
                             {game.status === 'started' && (
                               <Grid item>
-                                <SportsSoccerIcon fontSize="small" color="secondary"/>
+                                <SportsSoccerIcon fontSize="medium" color="secondary" sx={{ mt: '3px' }}/>
                               </Grid>
                             )}
                             <Grid item>
-                              <Typography variant="caption" component="div">
-                                {game.status === 'ended' ? 'Slutresultat' : 'Ställning'}
-                                {' '}
-                                {game.score}
+                              <Typography
+                                variant="body2"
+                                noWrap
+                                component="span"
+                                sx={teamCssStyle(`${index}-${game.homeTeam}`)}
+                                onClick={onHighlightTeam}
+                                data-team={`${index}-${game.homeTeam}`}
+                              >
+                                {game.homeTeam}
+                              </Typography>
+                              <Typography variant="body2" component="span">{' - '}</Typography>
+                              <Typography
+                                variant="body2"
+                                noWrap
+                                component="span"
+                                sx={teamCssStyle(`${index}-${game.awayTeam}`)}
+                                onClick={onHighlightTeam}
+                                data-team={`${index}-${game.awayTeam}`}
+                              >
+                                {game.awayTeam}
                               </Typography>
                             </Grid>
                           </Grid>
-                        )}
-                      </TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </TableContainer>
-          </React.Fragment>
-        ))}
-      </>)}
+                        </TableCell>
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              </TableContainer>
+            </React.Fragment>
+          ))}
+        </>)}
     </Container>
   );
 };

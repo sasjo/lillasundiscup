@@ -35,13 +35,6 @@ const CurrentGame = ({ games }) => {
             >
               {game.awayTeam}
             </Typography>
-            {game.score && (
-              <Typography variant="body2" component="div">
-                {game.status === 'ended' ? 'Slutresultat' : 'Ställning'}
-                {' '}
-                {game.score}
-              </Typography>
-            )}
           </ListItemText>
         </ListItem>
       ))}
