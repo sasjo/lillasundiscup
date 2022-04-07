@@ -59,7 +59,7 @@ const Info = () => {
         <li>
           Martin Lindberg,
           {' '}
-          <Button variant="text" data-id="0" onClick={showPhoneNumber}>Visa nummer</Button>
+          <Button variant="text" data-id="1" onClick={showPhoneNumber}>Visa nummer</Button>
         </li>
       </Typography>
     </Container>
