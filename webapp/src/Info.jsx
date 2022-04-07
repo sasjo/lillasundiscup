@@ -1,43 +1,66 @@
 import React from 'react';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+
+const phoneNumbers = [
+  '070-180 02 45',
+  '072-734 75 30',
+];
 
 const Info = () => {
+  const showPhoneNumber = (e) => {
+    const number = phoneNumbers[e.currentTarget.getAttribute('data-id')];
+    e.currentTarget.innerHTML = `<a href="tel:+46${number.substring(1).replace(/-|\s/g, '')}">${number}</a>`
+  }
   return (
     <Container sx={{mt: 2, mb: 2}} maxWidth="md">
       <Typography variant="h4" component="h1" gutterBottom>Information</Typography>
-      <Typography variant="body1" paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc elementum hendrerit sem eget
-        blandit. Phasellus eu sapien ornare, faucibus erat euismod, mattis magna. Aenean hendrerit
-        est ac elit efficitur luctus. Ut laoreet, eros eu euismod commodo, est magna pellentesque
-        velit, vitae porttitor dui erat ac orci. Nunc id faucibus lacus, in gravida ante. Morbi
-        eleifend nulla ex, ultricies commodo ex venenatis id. Maecenas tincidunt sagittis nisi,
-        sollicitudin pulvinar nulla molestie in. Nulla eu nulla purus. Quisque at ornare diam. Sed
-        nec ultrices odio, nec euismod mi. Mauris laoreet scelerisque risus nec tempor. Interdum et
-        malesuada fames ac ante ipsum primis in faucibus. Phasellus porttitor ornare lacus, in
-        consectetur ante egestas quis. Vestibulum facilisis tortor quis nisi ultrices, at laoreet
-        nisl ultricies. Donec ac iaculis est. Ut quis diam viverra, egestas nunc eu, molestie magna.
-      </Typography>
-      <Typography variant="h5" component="h2" gutterBottom>Curabitur rhoncus</Typography>
-      <Typography variant="body1" paragraph>
-        Curabitur rhoncus eleifend velit, id mattis leo ullamcorper vitae. Praesent consequat, augue
-        a dapibus lobortis, nisl lacus scelerisque elit, id placerat turpis quam quis lectus.
-        Vivamus placerat varius lorem ut tristique. Aenean aliquet mauris eu consequat bibendum.
-        Praesent ac nisi eget turpis vestibulum tincidunt. Cras lacinia eu enim sed tristique.
-        Praesent vehicula neque rutrum eros sollicitudin ultrices. Pellentesque a condimentum mi.
-        Vestibulum tristique non felis vitae ornare. Aliquam erat volutpat. Aliquam id sodales
-        velit.
+
+      <Typography variant="h5" component="h2" gutterBottom>
+        Fikaförsäljning och aktiviteter
       </Typography>
       <Typography variant="body1" paragraph>
-        Mauris iaculis egestas tortor elementum suscipit. Cras eget magna nulla. Aliquam
-        condimentum, nisl eu mollis tristique, ipsum eros pulvinar massa, id varius quam dolor at
-        sapien. Mauris vel massa ut massa hendrerit pulvinar id in nisl. Nam sapien lacus, venenatis
-        et ornare a, egestas sed ipsum. Proin lacus urna, pharetra non cursus quis, rutrum ac justo.
-        Duis ultricies volutpat dui nec congue. Maecenas a auctor sem, nec sollicitudin erat.
-        Suspendisse porta, ligula quis vehicula facilisis, sem nunc sagittis velit, a congue augue
-        neque ut arcu. Nunc commodo quis est in lacinia. Ut ac aliquam leo, eu convallis leo. In
-        placerat lobortis eros vitae faucibus. Integer dui nibh, malesuada vitae feugiat in, luctus
-        nec elit. Duis scelerisque non eros a sagittis. Suspendisse commodo elementum egestas.
+        Förutom att heja fram ungdomar som gör sin sista säsong som sjumannalag kan du köpa fika,
+        vara med i olika aktiviteter och köpa lotter. Fotboll är roligare med publik och vi
+        räknar med dig!
+      </Typography>
+
+      <Typography variant="h5" component="h2" gutterBottom>
+        Sunda värderingar
+      </Typography>
+      <Typography variant="body1" paragraph>
+        Vi som arrangerar vill att du som besöker oss tänker på att:
+      </Typography>
+      <Typography variant="body1" component="ul" gutterBottom>
+        <li>barnidrott är lek och glädje</li>
+        <li>barn inte är elitidrottare</li>
+        <li>föräldrar hejar på alla</li>
+        <li>domaren är mänsklig</li>
+        <li>ledare oftast är ideella.</li>
+      </Typography>
+      <Typography variant="body1" paragraph>
+        Domare under matcher är Sunderby SK:s nya domare som genomför praktik under handledning.
+        Beröm domarna – de är modiga och behövs.
+      </Typography>
+
+      <Typography variant="h5" component="h2" gutterBottom>
+        Frågor?
+      </Typography>
+      <Typography variant="body1" paragraph>
+        besvaras av cupgeneraler:
+      </Typography>
+      <Typography variant="body1" component="ul" gutterBottom>
+        <li>
+          Nisse Nilsson,
+          {' '}
+          <Button variant="text" data-id="0" onClick={showPhoneNumber}>Visa nummer</Button>
+        </li>
+        <li>
+          Martin Lindberg,
+          {' '}
+          <Button variant="text" data-id="0" onClick={showPhoneNumber}>Visa nummer</Button>
+        </li>
       </Typography>
     </Container>
   );

@@ -25,10 +25,23 @@ const Home = () => {
         <Box>
           <img src={sskLogo} alt="Sunderby SK" style={{ height: '25vmin', pointerEvents: 'none', display: 'block', margin: '10px auto' }} />
           <Typography variant="h4" component="h1" gutterBottom>
-            Lilla Sundis Cup 2022
+            Pionjären Lilla Sundis Cup 2022, 14-15 Maj
+          </Typography>
+
+          <Typography variant="h5" component="h2">
+            24:e gången – visst kommer du?
           </Typography>
           <Typography variant="body1" paragraph>
-            Lilla Sundis Cup är en fotbollscup som spelas 14-15 Maj 2022 i Södra Sunderbyn.
+            Pionjären Lilla Sundis Cup är tillbaka. För 24:e gången arrangerar Sunderby SK fotbollscup.
+            Efter två Coronapräglade säsonger med inställda fotbollsevent är vi mer taggade än någonsin.
+          </Typography>
+          <Typography variant="h5" component="h2">
+            Deltagande lag och spelschema
+          </Typography>
+          <Typography variant="body1" paragraph>
+            I år deltar flick- och pojklag där spelarna är födda 2010. Nyfiken på vilka lag som spelar?
+            Se fliken lag. Cupen spelas lördag 14 maj samt söndag 15 maj på Sundis konstgräsplan.
+            Spelschema finner du under fliken matcher.
           </Typography>
         </Box>
 
