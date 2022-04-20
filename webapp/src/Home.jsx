@@ -3,7 +3,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
-import sskLogo from './ssk.svg';
+import cupLogo from './cuplogo.svg';
 import GameWidget from './GameWidget';
 import CurrentGame from './CurrentGame';
 import NextGame from './NextGame';
@@ -23,11 +23,7 @@ const Home = () => {
     <>
       <Container maxWidth="md">
         <Box>
-          <img src={sskLogo} alt="Sunderby SK" style={{ height: '25vmin', pointerEvents: 'none', display: 'block', margin: '10px auto' }} />
-          <Typography variant="h4" component="h1" gutterBottom>
-            Pionjären Lilla Sundis Cup 2022, 14-15 Maj
-          </Typography>
-
+          <img src={cupLogo} alt="Pionjären Lilla Sundis Cup" style={{ width: '100%', pointerEvents: 'none', display: 'block', margin: '10px auto' }} />
           <Typography variant="h5" component="h2">
             24:e gången – visst kommer du?
           </Typography>
