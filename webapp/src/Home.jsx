@@ -3,13 +3,15 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
-import cupLogo from './cuplogo.svg';
+import sskLogo from './ssk.svg';
+import sponsorLogo from './pionjaren.svg';
 import GameWidget from './GameWidget';
 import CurrentGame from './CurrentGame';
 import NextGame from './NextGame';
 import TeamWidget from './TeamWidget';
 import WebSponsors from './sponsors/WebSponsors';
 import Box from '@mui/material/Box';
+import Stack from '@mui/material/Stack'
 
 const Home = () => {
 
@@ -21,7 +23,25 @@ const Home = () => {
     <>
       <Container maxWidth="md">
         <Box>
-          <img src={cupLogo} alt="Pionjären Lilla Sundis Cup" style={{ width: '100%', pointerEvents: 'none', display: 'block', margin: '10px auto' }} />
+          <img src={sponsorLogo} alt="Pionjären" style={{ width: '100%', maxHeight: '150px', pointerEvents: 'none', display: 'block', margin: '10px auto' }} />
+          <Typography variant="h3" component="h1" align="center">
+            Lilla Sundis Cup 2022
+          </Typography>
+          <Stack
+            direction="row"
+            justifyContent="center"
+            alignItems="center"
+            spacing={4}
+          >
+            <Typography variant="body1" align="right">
+              Flickor 14 maj
+            </Typography>
+            <Typography variant="body1" align="left">
+              Pojkar 15 maj
+            </Typography>
+          </Stack>
+          <img src={sskLogo} alt="Sunderby SK" style={{ height: '20vmin', maxHeight: '100px', pointerEvents: 'none', display: 'block', margin: '10px auto' }} />
+
           <Typography variant="h5" component="h2">
             24:e gången – visst kommer du?
           </Typography>
