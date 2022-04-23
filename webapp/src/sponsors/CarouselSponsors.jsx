@@ -13,9 +13,12 @@ const CarouselSponsors = () => {
   const {pathname} = useLocation();
   const display = pathname === '/' ? 'none' : 'block';
 
+  if (pathname === '/') {
+    return null;
+  }
+
   return (
     <Container sx={{mt: 2, mb: 2, display}} maxWidth="md">
-      {/*<Paper variant="outlined" sx={{ height: '100px' }}>*/}
       <Carousel
         animation="fade"
         stopAutoPlayOnHover={false}
@@ -35,7 +38,6 @@ const CarouselSponsors = () => {
           </div>
         ))}
       </Carousel>
-      {/*</Paper>*/}
     </Container>
   );
 }
