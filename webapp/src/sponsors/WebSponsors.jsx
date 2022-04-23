@@ -1,30 +1,21 @@
 import * as React from 'react';
-import Typography from '@mui/material/Typography';
 import PropTypes from 'prop-types';
 import Container from '@mui/material/Container';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
-import ImageListItemBar from '@mui/material/ImageListItemBar';
 import Divider from '@mui/material/Divider';
 import Chip from '@mui/material/Chip';
 import sponsors from './sponsor-data.json';
 
-const SponsorItem = ({ item: { name, img, link, subtitle = '' }, cols = 1 }) => (
-  <ImageListItem key={img}>
-    {/*<a href={link} title={name}>*/}
+const SponsorItem = ({item: {name, img, link}, cols = 1}) => (
+  <ImageListItem key={img} component="a" href={link} title={name}>
     <img
       src={img}
       // srcSet={img}
       alt={name}
       loading="lazy"
-      style={{ objectFit: 'scale-down', maxWidth: '100%', maxHeight: '100px' }}
+      style={{objectFit: 'scale-down', maxWidth: '100%', maxHeight: '100px'}}
     />
-    {/*</a>*/}
-    {/*<ImageListItemBar*/}
-    {/*  title={<Typography variant='caption' component="a" href={link}>{name}</Typography>}*/}
-    {/*  subtitle={subtitle}*/}
-    {/*  position="below"*/}
-    {/*/>*/}
   </ImageListItem>
 );
 
@@ -43,7 +34,7 @@ SponsorItem.defaultProps = {
 };
 
 const WebSponsors = () => {
-  const { main, home, web } = sponsors;
+  const {main, home, web} = sponsors;
 
   const all = [main, ...home, ...web];
 
@@ -52,7 +43,7 @@ const WebSponsors = () => {
       <Divider>
         <Chip label="Sponsorer"/>
       </Divider>
-      <ImageList variant="woven" cols={3} gap={8}>
+      <ImageList variant="default" cols={3} gap={8}>
         {all.map((item, index) => (
           <SponsorItem key={`sponsor${index}`} item={item}/>
         ))}
