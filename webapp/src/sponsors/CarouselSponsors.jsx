@@ -11,14 +11,13 @@ const CarouselSponsors = () => {
 
   // Hide the carousel on the landing page.
   const {pathname} = useLocation();
-  const display = pathname === '/' ? 'none' : 'block';
 
   if (pathname === '/') {
     return null;
   }
 
   return (
-    <Container sx={{mt: 2, mb: 2, display}} maxWidth="md">
+    <Container sx={{mt: 2, mb: 2}} maxWidth="md">
       <Carousel
         animation="fade"
         stopAutoPlayOnHover={false}
