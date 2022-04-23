@@ -2,16 +2,20 @@ import * as React from 'react';
 import Container from '@mui/material/Container';
 import Carousel from 'react-material-ui-carousel';
 import sponsors from './sponsor-data.json';
-import Paper from '@mui/material/Paper';
+import {useLocation} from 'react-router-dom';
 
 const CarouselSponsors = () => {
 
   const { main, home } = sponsors;
   const content = [main, ...home];
 
+  // Hide the carousel on the landing page.
+  const {pathname} = useLocation();
+  const display = pathname === '/' ? 'none' : 'block';
+
   return (
-    <Container sx={{mt: 2, mb: 2}} maxWidth="md">
-      <Paper variant="outlined">
+    <Container sx={{mt: 2, mb: 2, display}} maxWidth="md">
+      {/*<Paper variant="outlined" sx={{ height: '100px' }}>*/}
       <Carousel
         animation="fade"
         stopAutoPlayOnHover={false}
@@ -19,19 +23,19 @@ const CarouselSponsors = () => {
         navButtonsAlwaysInvisible
       >
         {content.map(({ img, name, link }, index) => (
-          <div key={`sponsor${index}`} style={{ height: '150px' }}>
+          <div key={`sponsor${index}`} style={{ height: '100px' }}>
             <a href={link} title={name}>
               <img
                 src={img}
                 alt={name}
                 loading="lazy"
-                style={{ maxHeight: '100%', display: 'block', margin: '0 auto' }}
+                style={{ maxHeight: '100%', maxWidth: '100%', display: 'block', margin: '0 auto' }}
               />
             </a>
           </div>
         ))}
       </Carousel>
-      </Paper>
+      {/*</Paper>*/}
     </Container>
   );
 }

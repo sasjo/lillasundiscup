@@ -11,17 +11,20 @@ import sponsors from './sponsor-data.json';
 
 const SponsorItem = ({ item: { name, img, link, subtitle = '' }, cols = 1 }) => (
   <ImageListItem key={img}>
+    {/*<a href={link} title={name}>*/}
     <img
       src={img}
       // srcSet={img}
       alt={name}
       loading="lazy"
+      style={{ objectFit: 'scale-down', maxWidth: '100%', maxHeight: '100px' }}
     />
-    <ImageListItemBar
-      title={<Typography component="a" href={link}>{name}</Typography>}
-      subtitle={subtitle}
-      position="below"
-    />
+    {/*</a>*/}
+    {/*<ImageListItemBar*/}
+    {/*  title={<Typography variant='caption' component="a" href={link}>{name}</Typography>}*/}
+    {/*  subtitle={subtitle}*/}
+    {/*  position="below"*/}
+    {/*/>*/}
   </ImageListItem>
 );
 
@@ -49,7 +52,7 @@ const WebSponsors = () => {
       <Divider>
         <Chip label="Sponsorer"/>
       </Divider>
-      <ImageList variant="standard" cols={3}>
+      <ImageList variant="woven" cols={3} gap={8}>
         {all.map((item, index) => (
           <SponsorItem key={`sponsor${index}`} item={item}/>
         ))}

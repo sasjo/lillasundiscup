@@ -1,41 +1,21 @@
 {
   "main": {
-    "name": "Acme",
-    "link": "https://www.sunderbysk.se",
-    "img": "images/sponsors/missing-logo.png"
+    "name": "Pionjären Fastigheter",
+    "link": "https://pionjaren.se",
+    "img": "images/sponsors/pionjaren.jpg"
   },
   "home": [
     {
-      "name": "Sponsor 1",
-      "link": "https://www.sunderbysk.se",
-      "img": "images/sponsors/missing-logo.png"
-    },
-    {
-      "name": "Sponsor 2",
-      "link": "https://www.sunderbysk.se",
-      "img": "images/sponsors/missing-logo2.png"
-    },
-    {
-      "name": "Sponsor 3",
-      "link": "https://www.sunderbysk.se",
-      "img": "images/sponsors/missing-logo3.png"
+      "name": "Luleå Markanläggning",
+      "link": "https://lma.se",
+      "img": "images/sponsors/lma.png"
     }
   ],
   "web": [
     {
-      "name": "Sponsor 4",
-      "link": "https://www.sunderbysk.se",
-      "img": "images/sponsors/missing-logo.png"
-    },
-    {
-      "name": "Sponsor 5",
-      "link": "https://www.sunderbysk.se",
-      "img": "images/sponsors/missing-logo2.png"
-    },
-    {
-      "name": "Sponsor 6",
-      "link": "https://www.sunderbysk.se",
-      "img": "images/sponsors/missing-logo3.png"
+      "name": "Heri",
+      "link": "https://heri.se",
+      "img": "images/sponsors/heri-logotyp.png"
     }
   ]
 }

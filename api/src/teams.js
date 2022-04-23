@@ -8,11 +8,11 @@ const getTeams = async () => getSheetValues(['Flickor!M3:M', 'Pojkar!M3:M'])
   .then(([girls, boys]) => {
     return [
       {
-        classifier: 'Flickor födda 2008',
+        classifier: 'Flickor födda 2010',
         teams: girls.sort(sortFn).map(mapTeam),
       },
       {
-        classifier: 'Pojkar födda 2008',
+        classifier: 'Pojkar födda 2010',
         teams: boys.sort(sortFn).map(mapTeam),
       },
     ];

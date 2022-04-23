@@ -18,8 +18,6 @@ const Home = () => {
   };
 
   return (
-    // https://images.unsplash.com/photo-1551958219-acbc608c6377?auto=format&fit=crop&w=2070
-    // https://unsplash.com/photos/1551958219-acbc608c6377
     <>
       <Container maxWidth="md">
         <Box>
