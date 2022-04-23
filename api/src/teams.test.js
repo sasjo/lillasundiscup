@@ -5,10 +5,12 @@ jest.mock('./sheets-api');
 
 test('It successfully loads teams', async () => {
   getSheetValues.mockResolvedValueOnce([
+    ['Girls Class'],
     [
       ['Team B'],
       ['Team A'],
     ],
+    ['Boys Class'],
     [
       ['Team C'],
       ['Team D'],
@@ -18,14 +20,14 @@ test('It successfully loads teams', async () => {
   expect(getSheetValues).toHaveBeenCalled();
   expect(teams).toEqual([
     {
-      classifier: 'Flickor födda 2008',
+      classifier: 'Girls Class',
       teams: [
         { name: 'Team A' },
         { name: 'Team B' },
       ],
     },
     {
-      classifier: 'Pojkar födda 2008',
+      classifier: 'Boys Class',
       teams: [
         { name: 'Team C' },
         { name: 'Team D' },

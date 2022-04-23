@@ -11,9 +11,11 @@ describe('/api/v1', () => {
 
   test('It can get teams', async () => {
     getSheetValues.mockResolvedValueOnce([
+      ['Girls Class'],
       [
         ['Team A'],
       ],
+      ['Boys Class'],
       [
         ['Team B'],
       ],
@@ -24,13 +26,13 @@ describe('/api/v1', () => {
       .expect('Content-Type', /json/);
     expect(response.body).toEqual([
       {
-        classifier: 'Flickor födda 2008',
+        classifier: 'Girls Class',
         teams: [
           { name: 'Team A' },
         ],
       },
       {
-        classifier: 'Pojkar födda 2008',
+        classifier: 'Boys Class',
         teams: [
           { name: 'Team B' },
         ],
