@@ -14,6 +14,7 @@ import { Link as RouterLink } from 'react-router-dom';
 const pages = [
   { name: 'Matcher', href: '/matcher.html' },
   { name: 'Lag', href: '/lag.html' },
+  { name: 'Regler', href: '/regler.html' },
   { name: 'Information', href: '/info.html' },
 ];
 

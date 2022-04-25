@@ -12,6 +12,7 @@ import GameSchedule from './GameSchedule';
 import Teams from './Teams';
 import CarouselSponsors from './sponsors/CarouselSponsors';
 import Info from './Info';
+import Rules from './Rules';
 
 const queryClient = new QueryClient();
 
@@ -35,6 +36,7 @@ const App = () => {
                 <Route path="/" element={<Home/>}/>
                 <Route path="/matcher.html" element={<GameSchedule/>}/>
                 <Route path="/lag.html" element={<Teams/>}/>
+                <Route path="/regler.html" element={<Rules/>}/>
                 <Route path="/info.html" element={<Info/>}/>
               </Routes>
             </main>
