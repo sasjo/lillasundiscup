@@ -6,9 +6,34 @@
   },
   "home": [
     {
+      "name": "Milwaukee",
+      "link": "https://milwaukee.se",
+      "img": "images/sponsors/milwaukee.jpg"
+    },
+    {
       "name": "Luleå Markanläggning",
       "link": "https://lma.se",
       "img": "images/sponsors/lma.png"
+    },
+    {
+      "name": "Niemi Bil",
+      "link": "https://niemibil.se",
+      "img": "images/sponsors/niemibil-logo-dark@2x.png"
+    },
+    {
+      "name": "Möbelhuset Storheden",
+      "link": "https://mobelhuset.nu",
+      "img": "images/sponsors/mobelhuset.jpg"
+    },
+    {
+      "name": "Riksbyggen",
+      "link": "https://riksbyggen.se",
+      "img": "images/sponsors/riksbyggen.jpg"
+    },
+    {
+      "name": "Rentav Städ och Miljövård",
+      "link": "https://rentav.se",
+      "img": "images/sponsors/rentav.png"
     }
   ],
   "web": [
