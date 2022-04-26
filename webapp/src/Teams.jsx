@@ -27,6 +27,8 @@ const clubMappings = {
   'savast.jpeg': /Sävast/,
   'sunderbysk.jpeg': /Sunderby|SSK/,
   'svartbjornsbyn.jpeg': /Svartbjörnsbyn/,
+  'ifk_lulea.jpeg': /IFK Luleå/,
+  'trangfors.jpeg': /Trångfors/,
 };
 
 const clubAvatar = (name) => {
