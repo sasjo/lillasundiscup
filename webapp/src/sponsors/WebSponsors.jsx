@@ -36,7 +36,11 @@ SponsorItem.defaultProps = {
 const WebSponsors = () => {
   const {main, home, web} = sponsors;
 
-  const all = [main, ...home, ...web];
+  const all = [
+    main,
+    ...home.filter(({ img }) => img !== null).sort(),
+    ...web.filter(({ img }) => img !== null).sort(),
+  ];
 
   return (
     <Container sx={{mt: 2, mb: 2}} maxWidth="md">

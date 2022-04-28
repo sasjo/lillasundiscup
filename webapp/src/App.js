@@ -13,6 +13,7 @@ import Teams from './Teams';
 import CarouselSponsors from './sponsors/CarouselSponsors';
 import Info from './Info';
 import Rules from './Rules';
+import Sponsors from './Sponsors';
 
 const queryClient = new QueryClient();
 
@@ -38,6 +39,7 @@ const App = () => {
                 <Route path="/lag.html" element={<Teams/>}/>
                 <Route path="/regler.html" element={<Rules/>}/>
                 <Route path="/info.html" element={<Info/>}/>
+                <Route path="/sponsorer.html" element={<Sponsors/>}/>
               </Routes>
             </main>
             <Footer/>

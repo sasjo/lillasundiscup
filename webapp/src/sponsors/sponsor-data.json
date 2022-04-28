@@ -6,6 +6,16 @@
   },
   "home": [
     {
+      "name": "Mila Bygg",
+      "link": "http://www.milabygg.se",
+      "img": null
+    },
+    {
+      "name": "Teknik och industrimetodik AB",
+      "link": null,
+      "img": null
+    },
+    {
       "name": "Milwaukee",
       "link": "https://milwaukee.se",
       "img": "images/sponsors/milwaukee.jpg"
@@ -38,6 +48,26 @@
   ],
   "web": [
     {
+      "name": "Ahlsell",
+      "link": "https://www.ahlsell.se",
+      "img": null
+    },
+    {
+      "name": "Anderssons Bygg",
+      "link": "http://www.anderssonsbygg.se",
+      "img": "images/sponsors/anderssonsbygg.png"
+    },
+    {
+      "name": "Bilinorr",
+      "link": "https://bilinorr.se",
+      "img": "images/sponsors/bilinorr.png"
+    },
+    {
+      "name": "Bygma",
+      "link": "https://bygma.se",
+      "img": null
+    },
+    {
       "name": "Flemströms",
       "link": "http://flemstroms.se",
       "img": "images/sponsors/flemstroms.jpg"
@@ -51,6 +81,71 @@
       "name": "Kaffepunkten",
       "link": "https://kaffepunkten.se",
       "img": "images/sponsors/kaffepunkten.png"
+    },
+    {
+      "name": "KL Bil och Motor",
+      "link": null,
+      "img": null
+    },
+    {
+      "name": "Luleå Hockey",
+      "link": null,
+      "img": null
+    },
+    {
+      "name": "Ojanperä",
+      "link": "https://ojanpera.se",
+      "img": null
+    },
+    {
+      "name": "Pentik",
+      "link": null,
+      "img": null
+    },
+    {
+      "name": "Prelab",
+      "link": null,
+      "img": null
+    },
+    {
+      "name": "Vejay sport",
+      "link": null,
+      "img": null
     }
+  ],
+  "nonwebb": [
+    "GLB",
+    "JIAB Hyrcenter",
+    "Patomella tak",
+    "OCAB"
+  ],
+  "small": [
+    "Bilia",
+    "Boström Ur & Guld",
+    "Bravida",
+    "Byggcentrum Eldabutiken",
+    "Eld pipor och plåt",
+    "Gotterian",
+    "Hemmagastronomi",
+    "Husqvarna",
+    "Husvagnscenter",
+    "Klipperian",
+    "Lindroths Motorcenter",
+    "Lindströms transport AB",
+    "Lockrop",
+    "Luleå Kommun",
+    "Lumire",
+    "Länsförsäkringar",
+    "Jari Enzio AB",
+    "Rörtrion",
+    "Scandic",
+    "Svetsprodukter i Piteå",
+    "Swedol",
+    "Tommys snickeri"
+  ],
+  "hidden": [
+    "Artic Group",
+    "Lindab",
+    "XL Bygg"
   ]
 }

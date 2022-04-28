@@ -7,7 +7,10 @@ import {useLocation} from 'react-router-dom';
 const CarouselSponsors = () => {
 
   const { main, home } = sponsors;
-  const content = [main, ...home];
+  const content = [
+    main,
+    ...home.filter(({ img }) => img !== null),
+  ];
 
   // Hide the carousel on the landing page.
   const {pathname} = useLocation();
