@@ -4,13 +4,21 @@ import Carousel from 'react-material-ui-carousel';
 import sponsors from './sponsor-data.json';
 import {useLocation} from 'react-router-dom';
 
-const CarouselSponsors = () => {
+const { main, home } = sponsors;
 
-  const { main, home } = sponsors;
-  const content = [
-    main,
-    ...home.filter(({ img }) => img !== null),
-  ];
+// We always show the main sponsor first. After that we randomize sponsors to not
+// favor alphabetically named companies. We do this once on page load to ensure
+// the carousel order is stable after first seen.
+const content = [
+  main,
+  ...home
+    .filter(({ img }) => img !== null)
+    .map(value => ({ value, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ value }) => value),
+];
+
+const CarouselSponsors = () => {
 
   // Hide the carousel on the landing page.
   const {pathname} = useLocation();
@@ -26,6 +34,7 @@ const CarouselSponsors = () => {
         stopAutoPlayOnHover={false}
         indicators={false}
         navButtonsAlwaysInvisible
+        interval={3000}
       >
         {content.map(({ img, name, link }, index) => (
           <div key={`sponsor${index}`} style={{ height: '100px' }}>
