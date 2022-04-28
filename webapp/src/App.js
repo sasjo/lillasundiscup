@@ -14,6 +14,7 @@ import CarouselSponsors from './sponsors/CarouselSponsors';
 import Info from './Info';
 import Rules from './Rules';
 import Sponsors from './Sponsors';
+import ScrollToTop from './ScrollToTop';
 
 const queryClient = new QueryClient();
 
@@ -30,6 +31,7 @@ const App = () => {
         >
           <CssBaseline/>
           <Router>
+            <ScrollToTop/>
             <AppMenu/>
             <CarouselSponsors/>
             <main>

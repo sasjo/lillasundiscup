@@ -12,12 +12,16 @@ import TeamWidget from './TeamWidget';
 import WebSponsors from './sponsors/WebSponsors';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack'
+import {useNavigate} from 'react-router-dom';
 
 const Home = () => {
 
   const widgetCss = {
     height: '100%',
+    cursor: 'pointer',
   };
+
+  const navigate = useNavigate();
 
   return (
     <>
@@ -61,19 +65,19 @@ const Home = () => {
 
         <Grid container spacing={2} columns={{xs: 4, md: 12}}>
           <Grid item xs={4} md={4}>
-            <Paper variant="outlined" sx={widgetCss}>
+            <Paper variant="outlined" sx={widgetCss} onClick={() => navigate('/matcher.html')}>
             <Typography color="text.secondary" align="center">Nu spelar</Typography>
             <GameWidget component={CurrentGame}/>
             </Paper>
           </Grid>
           <Grid item xs={4} md={4}>
-            <Paper variant="outlined" sx={widgetCss}>
+            <Paper variant="outlined" sx={widgetCss} onClick={() => navigate('/matcher.html')}>
             <Typography color="text.secondary" align="center">Nästa match</Typography>
             <GameWidget component={NextGame}/>
             </Paper>
           </Grid>
           <Grid item xs={4} md={4}>
-            <Paper variant="outlined" sx={widgetCss}>
+            <Paper variant="outlined" sx={widgetCss} onClick={() => navigate('/lag.html')}>
             <Typography color="text.secondary" align="center">Antal lag</Typography>
             <TeamWidget/>
             </Paper>
