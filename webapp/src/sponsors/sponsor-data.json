@@ -38,9 +38,19 @@
   ],
   "web": [
     {
+      "name": "Flemströms",
+      "link": "http://flemstroms.se",
+      "img": "images/sponsors/flemstroms.jpg"
+    },
+    {
       "name": "Heri",
       "link": "https://heri.se",
       "img": "images/sponsors/heri-logotyp.png"
+    },
+    {
+      "name": "Kaffepunkten",
+      "link": "https://kaffepunkten.se",
+      "img": "images/sponsors/kaffepunkten.png"
     }
   ]
 }
