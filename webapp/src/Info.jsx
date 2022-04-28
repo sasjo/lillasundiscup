@@ -27,6 +27,26 @@ const Info = () => {
         räknar med dig!
       </Typography>
 
+      <Typography variant="h6" component="h3" gutterBottom>
+        Föreläsning, 14 maj 12.00
+      </Typography>
+
+      <Typography variant="body1" paragraph>
+        Kom och lyssna på <Link href="https://www.facebook.com/search/top/?q=Vitality%20UF">Vitality
+        UF</Link>; tre ungdomar med idrottsbakgrund som skrivit en tänkvärd bok.
+        Under sitt sista år på gymnasiet har de drivit UF-företag. De har tagit fram en bok som
+        belyser baksidan av idrott: när pressen blir för stor. Flera stora idrottsstjärnor har gett
+        sin syn på saken! Vitality UF berättar mer under Pionjären Lilla Sundis Cup Lördag 14 maj
+        kl. 12.00.
+      </Typography>
+      <Typography variant="body1" paragraph>
+        Fotboll och all annan idrott ska vara kul, men ibland behöver vuxna, föräldrar och ledare
+        tänka till om vilken press man lägger på ungdomar.
+      </Typography>
+      <Typography variant="body1" paragraph>
+        Vitality UF:s bok finns till försäljning under lördagen.
+      </Typography>
+
       <Typography variant="h5" component="h2" gutterBottom>
         Sunda värderingar
       </Typography>
