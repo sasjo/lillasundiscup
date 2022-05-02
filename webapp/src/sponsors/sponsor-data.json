@@ -31,6 +31,11 @@
       "img": "images/sponsors/niemibil-logo-dark@2x.png"
     },
     {
+      "name": "NKV Kontorsvaror AB",
+      "link": "https://www.nkv.se/lulea",
+      "img": "images/sponsors/nkv.png"
+    },
+    {
       "name": "Möbelhuset Storheden",
       "link": "https://mobelhuset.nu",
       "img": "images/sponsors/mobelhuset.jpg"
@@ -48,16 +53,6 @@
   ],
   "web": [
     {
-      "name": "Ahlsell",
-      "link": "https://www.ahlsell.se",
-      "img": null
-    },
-    {
-      "name": "Anderssons Bygg",
-      "link": "http://www.anderssonsbygg.se",
-      "img": "images/sponsors/anderssonsbygg.png"
-    },
-    {
       "name": "Bilinorr",
       "link": "https://bilinorr.se",
       "img": "images/sponsors/bilinorr.png"
@@ -65,7 +60,7 @@
     {
       "name": "Bygma",
       "link": "https://bygma.se",
-      "img": null
+      "img": "images/sponsors/bygma.png"
     },
     {
       "name": "Flemströms",
@@ -95,17 +90,17 @@
     {
       "name": "Ojanperä",
       "link": "https://ojanpera.se",
-      "img": null
+      "img": "images/sponsors/ojanpera.webp"
     },
     {
       "name": "Pentik",
-      "link": null,
-      "img": null
+      "link": "https://www.pentik.com",
+      "img": "images/sponsors/pentik.jpg"
     },
     {
       "name": "Prelab",
-      "link": null,
-      "img": null
+      "link": "https://prelab.se",
+      "img": "images/sponsors/prelab.png"
     },
     {
       "name": "Vejay sport",
@@ -117,7 +112,8 @@
     "GLB",
     "JIAB Hyrcenter",
     "Patomella tak",
-    "OCAB"
+    "OCAB",
+    "Hussaneringar i Norr"
   ],
   "small": [
     "Bilia",
@@ -144,6 +140,8 @@
     "Tommys snickeri"
   ],
   "hidden": [
+    "Ahlsell",
+    "Anderssons Bygg",
     "Artic Group",
     "Lindab",
     "XL Bygg"

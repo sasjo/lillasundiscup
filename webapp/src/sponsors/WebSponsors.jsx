@@ -38,8 +38,8 @@ const WebSponsors = () => {
 
   const all = [
     main,
-    ...home.filter(({ img }) => img !== null).sort(),
-    ...web.filter(({ img }) => img !== null).sort(),
+    ...home.filter(({ img }) => img !== null).sort((a, b) => a.name.localeCompare(b.name)),
+    ...web.filter(({ img }) => img !== null).sort((a, b) => a.name.localeCompare(b.name)),
   ];
 
   return (
