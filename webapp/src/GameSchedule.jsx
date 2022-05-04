@@ -17,10 +17,14 @@ import {getGames} from './api';
 import Alert from '@mui/material/Alert';
 import LinearProgress from '@mui/material/LinearProgress';
 import lang from './strings';
+import sponsors from './sponsors/sponsor-data.json';
+import SponsorList from './sponsors/SponsorList';
 
 const GameSchedule = () => {
   const [highlightTeam, setHighlightTeam] = useState('');
   const [hideEndedGames, setHideEndedGames] = useState(true);
+
+  const { field: fieldSponsors } = sponsors;
 
   const {isLoading, isError, data} = useQuery('games', getGames);
 
@@ -158,6 +162,7 @@ const GameSchedule = () => {
             </React.Fragment>
           ))}
         </>)}
+      <SponsorList sponsors={fieldSponsors} title="Plansponsorer" />
     </Container>
   );
 };

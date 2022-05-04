@@ -4,6 +4,18 @@
     "link": "https://pionjaren.se",
     "img": "images/sponsors/pionjaren.jpg"
   },
+  "field": [
+    {
+      "name": "OCAB",
+      "link": "https://ocab.se",
+      "img": "images/sponsors/ocab.png"
+    },
+    {
+      "name": "PO:s trafiksskola",
+      "link": "https://www.pos-trafikskola.se",
+      "img": "images/sponsors/pos-trafikskola.png"
+    }
+  ],
   "home": [
     {
       "name": "Husvagnscenter",
