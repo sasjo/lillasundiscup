@@ -6,14 +6,34 @@
   },
   "home": [
     {
-      "name": "Mila Bygg",
-      "link": "http://www.milabygg.se",
-      "img": null
+      "name": "Husvagnscenter",
+      "link": "https://husvagnscenter.se",
+      "img": "images/sponsors/husvagnscenter.png"
     },
     {
-      "name": "Teknik och industrimetodik AB",
-      "link": null,
-      "img": null
+      "name": "HS Copy",
+      "link": "https://www.hscopy.se",
+      "img": "images/sponsors/hscopy.jpg"
+    },
+    {
+      "name": "Jetpack",
+      "link": "https://jetpak.com/se",
+      "img": "images/sponsors/jetpack.png"
+    },
+    {
+      "name": "Luleå Markanläggning",
+      "link": "https://lma.se",
+      "img": "images/sponsors/lma.png"
+    },
+    {
+      "name": "Lundbäcks Inredningar",
+      "link": "https://www.lundbacks.se",
+      "img": "images/sponsors/lundbacks.png"
+    },
+    {
+      "name": "Mila Bygg",
+      "link": "http://www.milabygg.se",
+      "img": "images/sponsors/milabygg.jpg"
     },
     {
       "name": "Milwaukee",
@@ -21,9 +41,9 @@
       "img": "images/sponsors/milwaukee.jpg"
     },
     {
-      "name": "Luleå Markanläggning",
-      "link": "https://lma.se",
-      "img": "images/sponsors/lma.png"
+      "name": "Möbelhuset Storheden",
+      "link": "https://mobelhuset.nu",
+      "img": "images/sponsors/mobelhuset.jpg"
     },
     {
       "name": "Niemi Bil",
@@ -36,11 +56,6 @@
       "img": "images/sponsors/nkv.png"
     },
     {
-      "name": "Möbelhuset Storheden",
-      "link": "https://mobelhuset.nu",
-      "img": "images/sponsors/mobelhuset.jpg"
-    },
-    {
       "name": "Riksbyggen",
       "link": "https://riksbyggen.se",
       "img": "images/sponsors/riksbyggen.jpg"
@@ -49,6 +64,16 @@
       "name": "Rentav Städ och Miljövård",
       "link": "https://rentav.se",
       "img": "images/sponsors/rentav.png"
+    },
+    {
+      "name": "Swerock",
+      "link": "https://swerock.se",
+      "img": "images/sponsors/swerock.png"
+    },
+    {
+      "name": "Teknik och industrimetodik AB",
+      "link": null,
+      "img": null
     }
   ],
   "web": [
@@ -129,7 +154,6 @@
     "Gotterian",
     "Hemmagastronomi",
     "Husqvarna",
-    "Husvagnscenter",
     "Klipperian",
     "Lindroths Motorcenter",
     "Lindströms transport AB",
