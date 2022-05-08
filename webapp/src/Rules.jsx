@@ -47,7 +47,7 @@ const Rules = () => (
       Matchtid – Speltid
     </Typography>
     <Typography variant="body1" paragraph>
-      Speltid 2x20 för flickorna och 2x15 för pojkarna.
+      Speltid 2x15 minuter.
     </Typography>
 
     <Typography variant="h5" component="h2" gutterBottom>
