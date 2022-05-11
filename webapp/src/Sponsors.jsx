@@ -5,11 +5,15 @@ import sponsors from './sponsors/sponsor-data.json';
 
 const Sponsors = () => {
 
+  const mapFn = ({ name }) => name;
+
   const allSponsors = [
     sponsors.main.name,
-    ...sponsors.home.map(({ name }) => name),
-    ...sponsors.web.map(({ name }) => name),
-    ...sponsors.nonwebb,
+    ...sponsors.home.map(mapFn),
+    ...sponsors.field.map(mapFn),
+    ...sponsors.web.map(mapFn),
+    ...sponsors.tshirt.map(mapFn),
+    ...sponsors.footballs.map(mapFn),
     ...sponsors.small,
   ].sort();
 

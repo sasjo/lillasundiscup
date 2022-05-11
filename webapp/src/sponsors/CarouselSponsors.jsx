@@ -6,17 +6,15 @@ import {useLocation} from 'react-router-dom';
 
 const { main, home } = sponsors;
 
-// We always show the main sponsor first. After that we randomize sponsors to not
-// favor alphabetically named companies. We do this once on page load to ensure
-// the carousel order is stable after first seen.
+// We randomize sponsors to not favor alphabetically named companies. We do this once on
+// page load to ensure the carousel order is stable after first seen.
 const content = [
   main,
-  ...home
-    .filter(({ img }) => img !== null)
-    .map(value => ({ value, sort: Math.random() }))
-    .sort((a, b) => a.sort - b.sort)
-    .map(({ value }) => value),
-];
+  ...home,
+].filter(({ img }) => img !== null)
+  .map(value => ({ value, sort: Math.random() }))
+  .sort((a, b) => a.sort - b.sort)
+  .map(({ value }) => value);
 
 const CarouselSponsors = () => {
 

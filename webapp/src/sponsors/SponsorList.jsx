@@ -5,18 +5,32 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import Divider from '@mui/material/Divider';
 import Chip from '@mui/material/Chip';
-import sponsors from './sponsor-data.json';
 
-const SponsorItem = ({item: {name, img, link}, cols = 1}) => (
-  <ImageListItem key={img} component="a" href={link} title={name}>
-    <img
-      src={img}
-      alt={name}
-      loading="lazy"
-      style={{objectFit: 'scale-down', maxWidth: '100%', maxHeight: '100px'}}
-    />
-  </ImageListItem>
-);
+const SponsorItem = ({item: {name, img, link}, cols = 1}) => {
+  if (link) {
+    return (
+      <ImageListItem key={img} component="a" href={link} title={name}>
+        <img
+          src={img}
+          alt={name}
+          loading="lazy"
+          style={{objectFit: 'scale-down', maxWidth: '100%', maxHeight: '100px'}}
+        />
+      </ImageListItem>
+    );
+  } else {
+    return (
+      <ImageListItem key={img} title={name}>
+        <img
+          src={img}
+          alt={name}
+          loading="lazy"
+          style={{objectFit: 'scale-down', maxWidth: '100%', maxHeight: '100px'}}
+        />
+      </ImageListItem>
+    );
+  }
+};
 
 SponsorItem.propTypes = {
   item: PropTypes.shape({

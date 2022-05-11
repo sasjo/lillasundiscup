@@ -91,6 +91,16 @@
       "name": "Teknik och industrimetodik AB",
       "link": null,
       "img": null
+    },
+    {
+      "name": "Tredje Porten AB",
+      "link": null,
+      "img": "images/sponsors/tredjeporten.png"
+    },
+    {
+      "name": "Åive",
+      "link": "https://aive.se",
+      "img": "images/sponsors/aive.png"
     }
   ],
   "web": [
@@ -135,6 +145,11 @@
       "img": null
     },
     {
+      "name": "Nordchark",
+      "link": "https://www.nordchark.se",
+      "img": "images/sponsors/nordchark.png"
+    },
+    {
       "name": "Ojanperä",
       "link": "https://ojanpera.se",
       "img": "images/sponsors/ojanpera.webp"
@@ -160,15 +175,45 @@
       "img": "images/sponsors/aventyrsbutiken.png"
     }
   ],
-  "nonwebb": [
-    "Däckproffset",
-    "GLB",
-    "JIAB Hyrcenter",
-    "Patomella tak",
-    "Hussaneringar i Norr",
-    "Korvgubben",
-    "OCAB",
-    "Tommys snickeri"
+  "tshirt": [
+
+    {
+      "name": "GLB",
+      "link": "http://www.glbbygg.se",
+      "img": "images/sponsors/glb.png"
+    },
+    {
+      "name": "JIAB Hyrcenter",
+      "link": "https://jiabhyrcenter.se",
+      "img": "images/sponsors/jiab.png"
+    },
+    {
+      "name": "Hussaneringar i Norr",
+      "link": "https://www.hussaneringarinorr.se",
+      "img": "images/sponsors/hussaneringar.svg"
+    }
+  ],
+  "footballs": [
+    {
+      "name": "Däckproffset",
+      "link": null,
+      "img": null
+    },
+    {
+      "name": "Korvgubben",
+      "link": null,
+      "img": null
+    },
+    {
+      "name": "Patomella tak",
+      "link": null,
+      "img": null
+    },
+    {
+      "name": "Tommys snickeri",
+      "link": null,
+      "img": null
+    }
   ],
   "small": [
     "Bilia",
