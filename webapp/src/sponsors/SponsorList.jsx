@@ -36,7 +36,7 @@ SponsorItem.propTypes = {
   item: PropTypes.shape({
     name: PropTypes.string.isRequired,
     img: PropTypes.string.isRequired,
-    link: PropTypes.string.isRequired,
+    link: PropTypes.string,
     subtitle: PropTypes.string,
   }).isRequired,
   cols: PropTypes.number,
@@ -66,7 +66,7 @@ SponsorList.propTypes = {
   sponsors: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
     img: PropTypes.string.isRequired,
-    link: PropTypes.string.isRequired,
+    link: PropTypes.string,
   })).isRequired,
 };
 
