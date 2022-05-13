@@ -31,6 +31,15 @@ const Info = () => {
         Föreläsning, 14 maj 12.00
       </Typography>
 
+      <Typography variant="caption" textAlign="center" component="div" sx={{  mb: '10px' }}>
+        <img
+          src="images/UFNORR-173.jpg"
+          title="Vitality UF"
+          style={{ display: 'block', margin: '0 auto', maxWidth:'100%', maxHeight: '100vmin' }}
+        />
+        Vitality UF, fotograf Lisa Björk
+      </Typography>
+
       <Typography variant="body1" paragraph>
         Kom och lyssna på <Link href="https://www.facebook.com/search/top/?q=Vitality%20UF">Vitality
         UF</Link>; tre ungdomar med idrottsbakgrund som skrivit en tänkvärd bok.
