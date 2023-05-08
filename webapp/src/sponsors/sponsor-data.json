@@ -6,19 +6,18 @@
   },
   "field": [
     {
-     "name": "Pionjären Fastigheter",
-    "link": "https://pionjaren.se",
-    "img": "images/sponsors/pionjaren.jpg"
+      "name": "Pionjären Fastigheter",
+      "link": "https://pionjaren.se",
+      "img": "images/sponsors/pionjaren.jpg"
     },
     {
-     "name": "Husvagnscenter",
+      "name": "Husvagnscenter",
       "link": "https://husvagnscenter.se",
       "img": "images/sponsors/husvagnscenter.png"
     }
   ],
   "home": [
-    
-     {
+    {
       "name": "Nyhlèns Hugosons",
       "link": "https://nyhlenshugosons.se/",
       "img": "images/sponsors/nyhlenshugosons.png"
@@ -75,17 +74,17 @@
       "link": "https://milwaukee.se",
       "img": "images/sponsors/milwaukee.jpg"
     },
-        {
+    {
       "name": "Norrlandsjord",
       "link": "https://norrlandsjord.se",
       "img": "images/sponsors/norrlandsjord.png"
     },
-     {
-      "name": "Arcticgroup",
+    {
+      "name": "Arctic Group",
       "link": "https://www.arcticgroup.se/",
       "img": "images/sponsors/arcticgroup.png"
     },
-     {
+    {
       "name": "JIAB Hyrcenter",
       "link": "https://jiabhyrcenter.se",
       "img": "images/sponsors/jiab.png"
@@ -105,14 +104,13 @@
       "link": "https://www.niemibil.se/",
       "img": "images/sponsors/niemibil.jpg"
     },
-  {
+    {
       "name": "Rutviks handelsträdgård",
       "link": "https://rutvikshandelstradgard.se/",
       "img": "images/sponsors/rutvik.png"
     }
   ],
   "tshirt": [
-
     {
       "name": "GLB",
       "link": "http://www.glbbygg.se",
@@ -145,17 +143,16 @@
       "link": null,
       "img": null
     },
-     {
+    {
       "name": "Norrlandsjord",
       "link": null,
       "img": null
     },
- {
+    {
       "name": "Wika möbler",
       "link": null,
       "img": null
     }
-
   ],
   "small": [
     "Lyckas med Mat",
@@ -166,12 +163,11 @@
     "Swedol",
     "Wika Möbler",
     "XL Bygg Stenvalls",
-    "Restaurang Karl-August"    
+    "Restaurang Karl-August"
   ],
   "hidden": [
     "Ahlsell",
     "Anderssons Bygg",
-    "Artic Group",
     "Lindab",
     "XL Bygg"
   ]

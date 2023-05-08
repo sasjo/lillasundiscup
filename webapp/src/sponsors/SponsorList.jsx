@@ -5,6 +5,7 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import Divider from '@mui/material/Divider';
 import Chip from '@mui/material/Chip';
+import distinctSponsors from './distinct-sponsors';
 
 const SponsorItem = ({item: {name, img, link}, cols = 1}) => {
   if (link) {
@@ -47,13 +48,14 @@ SponsorItem.defaultProps = {
 };
 
 const SponsorList = ({ title, sponsors }) => {
+  const data = distinctSponsors(sponsors);
   return (
     <Container sx={{mt: 2, mb: 2}} maxWidth="md">
       <Divider>
         <Chip label={title}/>
       </Divider>
-      <ImageList variant="default" cols={sponsors.length > 2 ? 3 : 2} gap={8}>
-        {sponsors.map((item, index) => (
+      <ImageList variant="default" cols={data.length > 2 ? 3 : 2} gap={8}>
+        {data.map((item, index) => (
           <SponsorItem key={`sponsor${index}`} item={item}/>
         ))}
       </ImageList>
