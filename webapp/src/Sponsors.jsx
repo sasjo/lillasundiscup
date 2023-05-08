@@ -2,12 +2,13 @@ import React from 'react';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import sponsors from './sponsors/sponsor-data.json';
+import distinctSponsors from './sponsors/distinct-sponsors';
 
 const Sponsors = () => {
 
   const mapFn = ({ name }) => name;
 
-  const allSponsors = [
+  const allSponsors = distinctSponsors([
     sponsors.main.name,
     ...sponsors.home.map(mapFn),
     ...sponsors.field.map(mapFn),
@@ -15,7 +16,7 @@ const Sponsors = () => {
     ...sponsors.tshirt.map(mapFn),
     ...sponsors.footballs.map(mapFn),
     ...sponsors.small,
-  ].sort();
+  ].sort());
 
   return (
     <Container sx={{mt: 2, mb: 2}} maxWidth="md">
