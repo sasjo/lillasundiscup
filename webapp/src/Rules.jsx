@@ -47,7 +47,7 @@ const Rules = () => (
       Matchtid – Speltid
     </Typography>
     <Typography variant="body1" paragraph>
-      Speltid 2x20 minuter under lördagen
+      Speltid 2x20 minuter under lördagen <br> 
       Speltid 2x15 minuter under Söndagen
     </Typography>
 
