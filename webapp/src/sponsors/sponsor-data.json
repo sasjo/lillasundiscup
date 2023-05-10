@@ -65,6 +65,11 @@
       "img": "images/sponsors/husvagnscenter.png"
     },
     {
+      "name": "Mokk Sweden",
+      "link": "https://www.mokksweden.se/",
+      "img": "images/sponsors/mokk.jpg"
+    },
+    {
       "name": "Lundbäcks Inredningar",
       "link": "https://www.lundbacks.se",
       "img": "images/sponsors/lundbacks.png"
@@ -95,14 +100,59 @@
       "img": "images/sponsors/klbil.jpg"
     },
     {
-      "name": "Pentik",
-      "link": "https://www.pentik.com",
-      "img": "images/sponsors/pentik.jpg"
+      "name": "Karl-August",
+      "link": "https://www.karlaugust.se/",
+      "img": "images/sponsors/karlaugust.png"
     },
     {
       "name": "Niemi Bil",
       "link": "https://www.niemibil.se/",
       "img": "images/sponsors/niemibil.jpg"
+    },
+     {
+      "name": "Kreativgruppen Luleå",
+      "link": "https://www.kreativgruppen.se/",
+      "img": "kreativ.png"
+    },
+    {
+      "name": "ICA MAXI Luleå",
+      "link": "",
+      "img": "icamaxi.png"
+    },
+    {
+      "name": "ÅIVE",
+      "link": "https://aive.se/",
+      "img": "aive.png"
+    },
+    {
+      "name": "Skitenkelt",
+      "link": "https://www.skitenkelt.com/",
+      "img": "Skitenkelt.jpg"
+    },
+     {
+      "name": "Korvgubben",
+      "link": "https://www.korvgubben.se/",
+      "img": "korvgubben.jpg"
+    },
+    {
+      "name": "Delikatessfabriken Vidsel",
+      "link": "https://www.delikatessfabriken.se/",
+      "img": "delifabrik.png"
+    },
+    {
+      "name": "NKV",
+      "link": "https://www.nkv.se/lulea",
+      "img": "nkv.png"
+    },
+     {
+      "name": "COOP",
+      "link": "https://www.coop.se/",
+      "img": "coop.png"
+    },
+      {
+      "name": "Svantes Vilt och Bär",
+      "link": "https://svantesvilt.se/",
+      "img": "svantes.jpg"
     },
     {
       "name": "Rutviks handelsträdgård",
