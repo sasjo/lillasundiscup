@@ -112,47 +112,47 @@
      {
       "name": "Kreativgruppen Luleå",
       "link": "https://www.kreativgruppen.se/",
-      "img": "kreativ.png"
+      "img": "images/sponsors/kreativ.png"
     },
     {
       "name": "ICA MAXI Luleå",
       "link": "",
-      "img": "icamaxi.png"
+      "img": "images/sponsors/icamaxi.png"
     },
     {
       "name": "ÅIVE",
       "link": "https://aive.se/",
-      "img": "aive.png"
+      "img": "images/sponsors/aive.png"
     },
     {
       "name": "Skitenkelt",
       "link": "https://www.skitenkelt.com/",
-      "img": "Skitenkelt.jpg"
+      "img": "images/sponsors/Skitenkelt.jpg"
     },
      {
       "name": "Korvgubben",
       "link": "https://www.korvgubben.se/",
-      "img": "korvgubben.jpg"
+      "img": "images/sponsors/korvgubben.jpg"
     },
     {
       "name": "Delikatessfabriken Vidsel",
       "link": "https://www.delikatessfabriken.se/",
-      "img": "delifabrik.png"
+      "img": "images/sponsors/delifabrik.png"
     },
     {
       "name": "NKV",
       "link": "https://www.nkv.se/lulea",
-      "img": "nkv.png"
+      "img": "images/sponsors/nkv.png"
     },
      {
       "name": "COOP",
       "link": "https://www.coop.se/",
-      "img": "coop.png"
+      "img": "images/sponsors/coop.png"
     },
       {
       "name": "Svantes Vilt och Bär",
       "link": "https://svantesvilt.se/",
-      "img": "svantes.jpg"
+      "img": "images/sponsors/svantes.jpg"
     },
     {
       "name": "Rutviks handelsträdgård",
@@ -213,6 +213,7 @@
     "Swedol",
     "Wika Möbler",
     "XL Bygg Stenvalls",
+    "Laitis",
     "Restaurang Karl-August"
   ],
   "hidden": [
