@@ -13,7 +13,7 @@ import sskLogo from './ssk.svg';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack'
 // import {useNavigate} from 'react-router-dom';
-import Link from '@mui/material/Link';
+//import Link from '@mui/material/Link';
 
 const Home = () => {
 
@@ -66,11 +66,53 @@ const Home = () => {
             Mer information och anmälan via formuläret:
           </Typography>
           <Typography variant="body1" paragraph fontWeight="bold">
-            <Link
-              href="https://docs.google.com/forms/d/e/1FAIpQLSdRPGqQ2WTORRNGZT1fQQTxKBzQmGkyOLJfOJscnMaKyXsy_g/viewform">
-              Länk till anmälan Lilla Sundis cup 2024
-            </Link>
+			Välkomna till Lilla Sundis Cup 2024!
           </Typography>
+		  <Typography variant="body1" paragraph>
+			Följande lag är anmälda, sex lag med pojkar och sex lag med flickor.
+          </Typography>
+		    <Typography variant="body1" paragraph fontWeight="bold">
+			Flickor – spelar den 11 maj:
+          </Typography>
+		  <Typography variant="body1" paragraph>
+			<div>
+			Notvikens IK (gul)
+			</div>
+			<div>
+			Gammelstads IF (grön/vit)
+			</div>
+			<div>
+			Sävast AIF (röd/?)
+			</div>
+			<div>
+			Bergnäsets AIK (vit) två lag
+			</div>
+			<div>
+			Sunderby SK Flickor (gul/blå)
+			</div>
+          </Typography>
+		 
+		 <Typography variant="body1" paragraph fontWeight="bold">
+			Pojkar – spelar den 12 maj:
+          </Typography>
+		  <Typography variant="body1" paragraph>
+			<div>
+			Gammelgården IF (rött)
+			</div>
+			<div>
+			Sunderby SK (gul/blå)
+			</div>
+			<div>
+			Gammelstads IF (grön/vit) två lag
+			</div>
+			<div>
+			Lira BK (blå/gul) två lag
+			</div>
+		   </Typography>
+		   <Typography variant="body1" paragraph>
+			För att kolla möjligheten till sen anmälan, maila
+			<a href="mailto:sunderbyskf2012@gmail.com?body=Efteranmälan"> <b>sunderbyskf2012@gmail.com</b></a>
+		   </Typography>
         </Box>
 
         {/*<Grid container spacing={2} columns={{xs: 4, md: 12}}>*/}

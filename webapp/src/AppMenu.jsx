@@ -17,7 +17,7 @@ const pages = [
   { name: 'Regler', href: '/regler.html' },
   { name: 'Information', href: '/info.html' },
   // { name: 'Stora lotteriet', href: '/stora-lotteriet.html' },
-  { name: 'Sponsorer 2023', href: '/sponsorer.html' },
+  { name: 'Sponsorer 2024', href: '/sponsorer.html' },
 ];
 
 // TODO Move to common place? Should we use translations to make changes easy?

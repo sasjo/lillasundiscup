@@ -1,19 +1,19 @@
 import React from 'react';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-// import Button from '@mui/material/Button';
+import Button from '@mui/material/Button';
 import Link from '@mui/material/Link';
 
-// const phoneNumbers = [
-//   '070-631 50 97',
-//   '070-317 94 66',
-// ];
+ const phoneNumbers = [
+   '072-72 25 003',
+   '070-54 88 152',
+ ]; 
 
 const Info = () => {
-  // const showPhoneNumber = (e) => {
-  //   const number = phoneNumbers[e.currentTarget.getAttribute('data-id')];
-  //   e.currentTarget.innerHTML = `<a href="tel:+46${number.substring(1).replace(/-|\s/g, '')}">${number}</a>`
-  // }
+   const showPhoneNumber = (e) => {
+     const number = phoneNumbers[e.currentTarget.getAttribute('data-id')];
+     e.currentTarget.innerHTML = `<a href="tel:+46${number.substring(1).replace(/-|\s/g, '')}">${number}</a>`
+   }
   return (
     <Container sx={{mt: 2, mb: 2}} maxWidth="md">
       <Typography variant="h4" component="h1" gutterBottom>Information</Typography>
@@ -45,24 +45,24 @@ const Info = () => {
         Beröm domarna – de är modiga och behövs.
       </Typography>
 
-      {/*<Typography variant="h5" component="h2" gutterBottom>*/}
-      {/*  Frågor?*/}
-      {/*</Typography>*/}
-      {/*<Typography variant="body1" paragraph>*/}
-      {/*  besvaras av cupgeneraler:*/}
-      {/*</Typography>*/}
-      {/*<Typography variant="body1" component="ul" gutterBottom>*/}
-      {/*  <li>*/}
-      {/*    Annika Koskenniemi,*/}
-      {/*    {' '}*/}
-      {/*    <Button variant="text" data-id="0" onClick={showPhoneNumber}>Visa nummer</Button>*/}
-      {/*  </li>*/}
-      {/*  <li>*/}
-      {/*    Linda Kenttä,*/}
-      {/*    {' '}*/}
-      {/*    <Button variant="text" data-id="1" onClick={showPhoneNumber}>Visa nummer</Button>*/}
-      {/*  </li>*/}
-      {/*</Typography>*/}
+      <Typography variant="h5" component="h2" gutterBottom>
+        Frågor?
+      </Typography>
+      <Typography variant="body1" paragraph>
+        besvaras av cupgeneraler:
+      </Typography>
+      <Typography variant="body1" component="ul" gutterBottom>
+        <li>
+          Martin Lindberg,
+          {' '}
+          <Button variant="text" data-id="0" onClick={showPhoneNumber}>Visa nummer</Button>
+        </li>
+        <li>
+          Linda Ökvist,
+          {' '}
+          <Button variant="text" data-id="1" onClick={showPhoneNumber}>Visa nummer</Button>
+        </li>
+      </Typography>
 
       <Typography variant="h5" component="h2" gutterBottom>
         Vägbeskrivning
