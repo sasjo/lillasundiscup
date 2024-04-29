@@ -10,7 +10,7 @@ import theme from './theme';
 import Home from './Home';
 import GameSchedule from './GameSchedule';
 import Teams from './Teams';
-// import CarouselSponsors from './sponsors/CarouselSponsors';
+import CarouselSponsors from './sponsors/CarouselSponsors';
 import Info from './Info';
 import Rules from './Rules';
 import Sponsors from './Sponsors';
@@ -34,7 +34,7 @@ const App = () => {
           <Router>
             <ScrollToTop/>
             <AppMenu/>
-            {/*<CarouselSponsors/>*/}
+            {<CarouselSponsors/>}
             <main>
               <Routes>
                 <Route path="/" element={<Home/>}/>
