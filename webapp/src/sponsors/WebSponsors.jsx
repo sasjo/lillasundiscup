@@ -5,7 +5,7 @@ import SponsorList from './SponsorList';
 const WebSponsors = () => {
   const {main, field, home, tshirt, footballs, web} = sponsors;
 
-  const filterAndSort = (array) => array.filter(({ img }) => img !== null)
+  const filterAndSort = (array) => array.filter(({ img }) => img != null)
     .sort((a, b) => a.name.localeCompare(b.name));
 
   const all = [

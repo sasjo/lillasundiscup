@@ -4,12 +4,15 @@ import Container from '@mui/material/Container';
 // import Grid from '@mui/material/Grid';
 // import Paper from '@mui/material/Paper';
 import sskLogo from './ssk.svg';
+import f12 from './f12.png';
+import p12 from './p12.png';
 // import sponsorLogo from './pionjaren.svg';
+
 // import GameWidget from './GameWidget';
 // import CurrentGame from './CurrentGame';
 // import NextGame from './NextGame';
 // import TeamWidget from './TeamWidget';
-// import WebSponsors from './sponsors/WebSponsors';
+import WebSponsors from './sponsors/WebSponsors';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack'
 // import {useNavigate} from 'react-router-dom';
@@ -109,11 +112,18 @@ const Home = () => {
 			Lira BK (blå/gul) två lag
 			</div>
 		   </Typography>
-		   <Typography variant="body1" paragraph>
-			För att kolla möjligheten till sen anmälan, maila
-			<a href="mailto:sunderbyskf2012@gmail.com?body=Efteranmälan"> <b>sunderbyskf2012@gmail.com</b></a>
-		   </Typography>
+		   
         </Box>
+		<Box>
+			 <Typography variant="body1" paragraph fontWeight="bold">
+				Spelschema Lördag 11/5:
+			  </Typography>
+			<img src={f12} alt="Spel schema" style={{ width: '100%', maxHeight: '100%', pointerEvents: 'none', display: 'block', margin: '10px auto' }} />
+			<Typography variant="body1" paragraph fontWeight="bold">
+				Spelschema Söndag 12/5:
+			  </Typography>
+			<img src={p12} alt="Spel schema" style={{ width: '100%', maxHeight: '100%', pointerEvents: 'none', display: 'block', margin: '10px auto' }} />
+		</Box>
 
         {/*<Grid container spacing={2} columns={{xs: 4, md: 12}}>*/}
         {/*  <Grid item xs={4} md={4}>*/}
@@ -136,7 +146,7 @@ const Home = () => {
         {/*  </Grid>*/}
         {/*</Grid>*/}
       </Container>
-      {/*<WebSponsors/>*/}
+      {<WebSponsors/>}
     </>
   );
 };

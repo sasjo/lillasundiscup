@@ -16,7 +16,7 @@ const pages = [
   // { name: 'Lag', href: '/lag.html' },
   { name: 'Regler', href: '/regler.html' },
   { name: 'Information', href: '/info.html' },
-  // { name: 'Stora lotteriet', href: '/stora-lotteriet.html' },
+//  { name: 'Stora lotteriet', href: '/stora-lotteriet.html' },
   { name: 'Sponsorer 2024', href: '/sponsorer.html' },
 ];
 
