@@ -31,7 +31,7 @@ const Rules = () => (
     </Typography>
     <Typography variant="body1" paragraph>
       Lilla Sundis Cup spelas efter Svenska FF:s tävlingsbestämmelser. Cupen är avsedd för spelare
-      födda 2011 eller senare.
+      födda 2012 eller senare.
     </Typography>
 
     <Typography variant="h5" component="h2" gutterBottom>
@@ -47,8 +47,7 @@ const Rules = () => (
       Matchtid – Speltid
     </Typography>
     <Typography variant="body1" paragraph>
-      Speltid 2x20 minuter under lördagen
-      Speltid 2x15 minuter under Söndagen
+      2x20 minuter
     </Typography>
 
     <Typography variant="h5" component="h2" gutterBottom>

@@ -1,220 +1,82 @@
 {
   "main": {
-    "name": "Pionjären Fastigheter",
-    "link": "https://pionjaren.se",
-    "img": "images/sponsors/pionjaren.jpg"
+    "name": "",
+    "link": "",
+    "img": "images/sponsors/missing-logo.png"
   },
   "field": [
     {
-      "name": "Pionjären Fastigheter",
-      "link": "https://pionjaren.se",
-      "img": "images/sponsors/pionjaren.jpg"
+      "name": "Sunderby åkeri",
+      "link": "",
+      "img": "images/sponsors/sunderby_akeri.png"
     },
-    {
-      "name": "Husvagnscenter",
-      "link": "https://husvagnscenter.se",
-      "img": "images/sponsors/husvagnscenter.png"
+	{
+      "name": "JIAB Ställningsmontage",
+      "link": "https://jiabstallning.se/",
+      "img": "images/sponsors/jiab_stallningsmontage.png"
     }
   ],
   "home": [
-    {
-      "name": "Nyhlèns Hugosons",
-      "link": "https://nyhlenshugosons.se/",
-      "img": "images/sponsors/nyhlenshugosons.png"
+	{
+      "name": "Sunderby åkeri",
+      "link": "",
+      "img": "images/sponsors/sunderby_akeri.png"
     },
-    {
-      "name": "Husvagnscenter",
-      "link": "https://husvagnscenter.se",
-      "img": "images/sponsors/husvagnscenter.png"
-    },
-    {
-      "name": "Lundbäcks Inredningar",
-      "link": "https://www.lundbacks.se",
-      "img": "images/sponsors/lundbacks.png"
-    },
-    {
-      "name": "Milwaukee",
-      "link": "https://milwaukee.se",
-      "img": "images/sponsors/milwaukee.jpg"
-    },
-    {
-      "name": "Niemi Bil",
-      "link": "https://niemibil.se",
-      "img": "images/sponsors/niemibil-logo-dark@2x.png"
-    },
-    {
-      "name": "Norrlandsjord",
-      "link": "https://norrlandsjord.se",
-      "img": "images/sponsors/norrlandsjord.png"
-    },
-    {
-      "name": "Riksbyggen",
-      "link": "https://riksbyggen.se",
-      "img": "images/sponsors/riksbyggen.jpg"
+	{
+      "name": "JIAB Ställningsmontage",
+      "link": "https://jiabstallning.se/",
+      "img": "images/sponsors/jiab_stallningsmontage.png"
     }
   ],
   "web": [
-    {
-      "name": "Nyhlèns Hugosons",
-      "link": "https://nyhlenshugosons.se/",
-      "img": "images/sponsors/nyhlenshugosons.png"
-    },
-    {
-      "name": "Husvagnscenter",
-      "link": "https://husvagnscenter.se",
-      "img": "images/sponsors/husvagnscenter.png"
-    },
-    {
-      "name": "Mokk Sweden",
-      "link": "https://www.mokksweden.se/",
-      "img": "images/sponsors/mokk.jpeg"
-    },
-    {
-      "name": "Lundbäcks Inredningar",
-      "link": "https://www.lundbacks.se",
-      "img": "images/sponsors/lundbacks.png"
-    },
-    {
-      "name": "Milwaukee",
-      "link": "https://milwaukee.se",
-      "img": "images/sponsors/milwaukee.jpg"
-    },
+    
     {
       "name": "Norrlandsjord",
       "link": "https://norrlandsjord.se",
       "img": "images/sponsors/norrlandsjord.png"
-    },
-    {
-      "name": "Arctic Group",
-      "link": "https://www.arcticgroup.se/",
-      "img": "images/sponsors/arcticgroup.png"
-    },
-    {
-      "name": "JIAB Hyrcenter",
-      "link": "https://jiabhyrcenter.se",
-      "img": "images/sponsors/jiab.png"
-    },
-    {
-      "name": "KL Bil och Motor",
-      "link": "https://www.klbil.com",
-      "img": "images/sponsors/klbil.jpg"
-    },
-    {
-      "name": "Karl-August",
-      "link": "https://www.karlaugust.se/",
-      "img": "images/sponsors/karlaugust.png"
-    },
-    {
-      "name": "Niemi Bil",
-      "link": "https://www.niemibil.se/",
-      "img": "images/sponsors/niemibil.jpg"
-    },
-     {
-      "name": "Kreativgruppen Luleå",
-      "link": "https://www.kreativgruppen.se/",
-      "img": "images/sponsors/kreativ.png"
     },
     {
       "name": "ICA MAXI Luleå",
       "link": "",
       "img": "images/sponsors/icamaxi.png"
     },
-    {
-      "name": "ÅIVE",
-      "link": "https://aive.se/",
-      "img": "images/sponsors/aive.png"
+	{
+      "name": "Nordchark",
+      "link": "",
+      "img": "images/sponsors/nordchark.png"
     },
-    {
-      "name": "Skitenkelt",
-      "link": "https://www.skitenkelt.com/",
-      "img": "images/sponsors/Skitenkelt.jpg"
-    },
-     {
-      "name": "Korvgubben",
-      "link": "https://www.korvgubben.se/",
-      "img": "images/sponsors/korvgubben.jpeg"
-    },
-    {
-      "name": "Delikatessfabriken Vidsel",
-      "link": "https://www.delikatessfabriken.se/",
-      "img": "images/sponsors/delifabrik.png"
-    },
-    {
-      "name": "NKV",
-      "link": "https://www.nkv.se/lulea",
-      "img": "images/sponsors/nkv.png"
-    },
-     {
-      "name": "COOP",
-      "link": "https://www.coop.se/",
-      "img": "images/sponsors/coop.png"
-    },
-      {
-      "name": "Svantes Vilt och Bär",
-      "link": "https://svantesvilt.se/",
-      "img": "images/sponsors/svantes.jpeg"
-    },
-    {
-      "name": "Rutviks handelsträdgård",
-      "link": "https://rutvikshandelstradgard.se/",
-      "img": "images/sponsors/rutvik.png"
+	{
+      "name": "Bright EQ",
+      "link": "https://brighteq.se/",
+      "img": "images/sponsors/bright_eq.png"
     }
   ],
   "tshirt": [
     {
-      "name": "GLB",
-      "link": "http://www.glbbygg.se",
-      "img": "images/sponsors/glb.png"
+      "name": "Hussanering i norr",
+      "link": "https://www.hussaneringarinorr.se/",
+      "img": "images/sponsors/hussaneringar_i_norr.png"
     },
     {
-      "name": "JIAB Hyrcenter",
-      "link": "https://jiabhyrcenter.se",
-      "img": "images/sponsors/jiab.png"
+      "name": "Kaiding",
+      "link": "https://kaiding.se/",
+      "img": "images/sponsors/kaiding.png"
     }
   ],
   "footballs": [
     {
-      "name": "Arctic Group",
+      "name": "Huberts El",
       "link": null,
       "img": null
     },
     {
       "name": "Norrlandsjord",
-      "link": null,
-      "img": null
-    },
-    {
-      "name": "Patomella tak",
-      "link": null,
-      "img": null
-    },
-    {
-      "name": "Tommys snickeri",
-      "link": null,
-      "img": null
-    },
-    {
-      "name": "Norrlandsjord",
-      "link": null,
-      "img": null
-    },
-    {
-      "name": "Wika möbler",
       "link": null,
       "img": null
     }
   ],
   "small": [
-    "Lyckas med Mat",
-    "Svantes Vilt och Bär",
-    "Mokk AB",
-    "Ryds glas",
-    "Sunderbyns Åkeri",
-    "Swedol",
-    "Wika Möbler",
-    "XL Bygg Stenvalls",
-    "Laitis",
-    "Restaurang Karl-August"
+    ""
   ],
   "hidden": [
     "Ahlsell",
